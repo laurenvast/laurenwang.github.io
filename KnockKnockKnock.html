@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Knock Knock Knock&#9725;Lauren Wang</title>
+	<link rel="icon" href="img/fav.png" type="image/x-icon">
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+	<link href="css/animate.min.css" rel="stylesheet">
+	<link href="css/aos.css" rel="stylesheet">
+	<!-- main style -->
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-55366341-2', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+	<style>#slider {height: 800px; background-image:url('img/portfolio/knock6.jpg');background-size: cover; background-repeat: no-repeat;
+    background-attachment: fixed; background-position: center; -webkit-transition: background 1s ;}
+		#slider:after {position: absolute; content: ''; top: 0; left: 0; width: 100%; height: 800px; z-index:1; }
+		.icon {font-size: 50px; color: #fff; position: relative; z-index: 3;}
+		#left {float: left; margin: 320px 30px;}
+		#right {float: right; margin: 320px 30px;}</style>
+
+	</head>
+	<body onload="sliderTimer()">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">
+            <!-- <div id="logo" aria-busy="true" aria-label="Loading, please wait." role="progressbar"> -->
+
+
+            <div class="preloader" aria-busy="true" aria-label="Loading, please wait." role="progressbar">
+            </div>
+
+        </div>
+    </div>
+    <!-- ./Preloader -->
+
+		<!-- header -->
+		<header class="navbar-fixed-top nav-down">
+			<nav>
+				<ul>
+					<li class="cubelogo v-center">
+						<a href="index.html">
+							<div id="logo"></div>
+						</a>
+					</li>
+					<li class="v-center">
+						<ul class="menu">
+							<li><a href="index.html#about">About</a></li>
+							<li><a href="index.html#experience">Experience</a></li>
+							<li><a href="index.html#projects">Portfolio</a></li>
+							<li><a href="index.html#contact">Contact</a></li>
+						</ul>
+
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- ./header -->
+
+
+		<!--DEMO01-->
+		<!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
+		<div class="clearfix"></div>
+		<div class="modal-content">
+			<div class="container">
+				<div class="portfolio-padding">
+					<div class="col-md-8 col-md-offset-2" data-aos="fade-up">
+						<h2>Knock Knock Knock</h2>
+						<div class="h-50"></div>
+					</div>
+				</div>
+			</div>
+
+
+	<div id="slider">
+		<!-- <div class="icon" id="left"><i class="fa fa-angle-left" onclick="prev()"></i></div> -->
+		<!-- <div class="icon" id="right"><i class="fa fa-angle-right" onclick="next()"></i></div> -->
+	</div>			
+			<div class="container">
+				<iframe src="https://drive.google.com/file/d/1HRh8h_Y8c-kUh1Mu3eBzimfpqrY7jJjLpQ/preview" width="100%" height="480"></iframe>
+
+			</div>
+		</div> 
+	</div>
+
+	<footer style="background-color: white">
+
+		<div class="container-fluid">
+			<ul class="social2">
+				<li><a href="https://www.facebook.com/LaurenVast/"><i class="ion-social-facebook"></i></a></li>
+				<li><a href="https://instagram.com/lauren_vast/"><i class="ion-social-instagram-outline"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/laurenwzr/"><i class="ion-social-linkedin"></i></a></li>
+				<li><a href="https://plus.google.com/u/0/+LaurenWang/"><i class="ion-social-googleplus"></i></a></li>
+				<li><a href="http://blog.laurencould.be/"><i class="ion-android-favorite"></i></a></li>
+			</ul>
+			<p class="copyright">© Lauren Wang 2016</p>
+		</div>
+	</footer>
+
+	<script>
+		var imgadr= ['img/portfolio/knock1.jpg','img/portfolio/knock3.jpg','img/portfolio/knock4.jpg','img/portfolio/knock5.jpg','img/portfolio/knock7.jpg','img/portfolio/knock2.jpg','img/portfolio/knock6.jpg'];
+
+		var cnt= 0;
+		var timer;
+
+		function sliderTimer()
+		{
+			timer= setInterval(slider, 3500);
+		}
+
+		function slider()
+		{
+			cnt++;
+			if(cnt == imgadr.length)
+				cnt= 0;
+
+			var slider= document.getElementById('slider');
+			slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
+		}
+
+		function next()
+		{
+			clearInterval(timer);
+
+			cnt++; 
+			if(cnt == imgadr.length)
+				cnt= 0;
+
+			var slider= document.getElementById('slider');
+			slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
+
+			sliderTimer();
+		}
+
+		function prev()
+		{
+			console.log('prev');
+			clearInterval(timer);
+
+			cnt--;
+			if(cnt == -1)
+				cnt= imgadr.length-1;
+
+			var slider= document.getElementById('slider');
+			slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
+			document.getElementById('sliderHeader').innerHTML= headArray[cnt];
+			document.getElementById('sliderPara').innerHTML= paraArray[cnt];
+
+			sliderTimer();
+		}
+
+
+	</script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/aos.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
+	<!--  main script  -->
+	<script src="js/scroll.js"></script>
+	<script src="js/logo.js"></script>
+
+</body>
+</html>

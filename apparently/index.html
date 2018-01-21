@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apparently // Zhuoran Wang</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src="ripple.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+SC" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+
+<style>
+	body {
+		padding: 0; 
+		background: white;
+ 		margin: auto;
+	    overflow: hidden;
+	    font-family: 'Alegreya', serif;
+	     font-size: 2em;
+
+	}
+
+	.colorLayer {
+		padding: 0;
+	    margin: 0;
+	    width: 100%;
+	    height: 100%;
+	    animation: showup 5s ease;
+		animation: grad 30s linear infinite;
+	}
+	
+
+
+	canvas {
+		mix-blend-mode: lighten;
+		z-index: -1;
+		animation: showup 3s ease
+	}
+
+
+
+	#ripple {
+  		background-image: url(4.jpg);
+  		background-size: cover;
+  		width: 100%;
+ 		height: 1380px;
+ 		display: none;
+ 	}
+
+	.title{
+		width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		margin-top: 150px;
+	}
+
+	.texts {
+		animation: showup 5s ease 3s;
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+    	height: 100%;
+
+	}
+
+	h1, h4, h6 {
+				font-family: 'Alegreya SC', serif;
+
+		font-weight: normal;
+		margin: auto;
+		letter-spacing: .1em;
+	}
+
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: .4em;
+	}
+
+	h6 {
+		font-size: .6em;
+	}
+
+	p {
+		font-size: .5em;
+	}
+
+	.info {
+		width: 300px;
+		/*display: flex;*/
+		text-align: center;
+		margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 80px;
+	}
+
+	.info2 {
+		text-align: center;
+		margin-left: auto;
+	    margin-right: auto;
+	    margin-top: 80px;
+	}
+	.info2>p {
+		padding: 0;
+		margin: 10px;
+	}
+	.info2>h6 {
+		text-transform: uppercase;
+	}
+	
+	.info>div {
+    	margin: auto;
+    }
+
+	.info>div>p {
+		padding: 0;
+		margin: 0;
+		    font-size: .4em;
+	}
+
+	@keyframes showup {
+		0% {opacity: 0}
+		100% {opacity: 1}
+	}
+
+	@keyframes grad {
+	    0% {
+	    	background-color: hsl(0, 100%, 50%);
+	    }
+		12.5% {
+	    	background-color: hsl(45, 100%, 50%);
+	    }
+	    20% {
+	    	background-color: hsl(60, 100%, 50%);
+	    }
+	    37.5% {
+	    	background-color: hsl(135, 100%, 50%);
+	    }
+	    50% {
+	    	background-color: hsl(180, 100%, 50%);
+	    }
+		62.5% {
+	    	background-color: hsl(225, 100%, 50%);
+	    }
+	    75% {
+	    	background-color: hsl(270, 100%, 50%);
+	    }
+		87.5% {
+	    	background-color: hsl(315, 100%, 50%);
+	    }
+	    100% {
+	    	background-color: hsl(360, 100%, 50%);
+	    }
+	}
+
+	.about {
+		font-size: .5em;
+		text-decoration: none;
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    margin: 10px;
+	    color: white;
+	        mix-blend-mode: overlay;
+	        opacity: .9;
+	}
+
+	.buttons {
+		font-size: .5em;
+		text-decoration: none;
+		display: flex;
+		position: fixed;
+	    top: 0;
+	    left: 0;
+	    margin: 10px;
+	    color: white;
+	    mix-blend-mode: overlay;
+	}
+
+	#imgs {
+		font-size: .6em;
+	    background-color: rgba(255,255,255,0);
+	    border: none;
+	    font-family: 'Alegreya', serif;
+	    position: fixed;
+		width: 150px;
+		height: 50px;
+	    top: 50%;
+	    left: 50%;
+	    margin-top: -25px;
+	    margin-left: -75px;
+   		text-align: center;
+    	    color: white;
+	    mix-blend-mode: overlay;
+	    cursor: pointer;
+	}
+
+	div.buttons>a {
+		    margin: 20px;
+	}
+
+	div.title>p {
+		margin-bottom: 0;
+		margin-top: 30px;
+	}
+
+	@media (max-width: 600px) {
+		.title {
+		    width: 90%;
+		    margin-top: 70px;
+		}
+		h1 {
+			font-size: 1em;
+		}
+		h4 {
+			font-size: .8em;
+		}
+		.info, .info2 {
+			    margin-top: 50px;
+		}
+		#ripple {
+ 			height: 100vh;
+ 		}
+ 		.about {
+			font-size: .6em;
+			margin: 135% auto auto auto;
+		    text-align: center;
+    		width: 100%;
+		}
+		#imgs {
+			    top: 5%;
+		}
+	}
+
+	@media (max-width: 400px) {
+		h1 {
+			font-size: 1.2em;
+		}
+	}
+}
+
+</style>
+
+</head>
+<body>
+	<div class="colorLayer">
+		<div class="texts">
+			<div class="title">
+				<h1>Apparently</h1>
+				<p>An Interactive Installation by</p>
+				<h4>ZHUORAN WANG</h4>
+				<h6>(LAUREN)</h6>
+			</div>
+			<div class="info2">
+					<h6>MFA Thesis Exhibition</h6>
+					<h6>OPENING RECEPTION</h6>
+					<p>Sun, Apr. 30th, 6 pm - 9 pm</p>
+					<p>Pablo's Birthday, 2nd fl</p>
+					<p>57 Orchard St, New York City</p>
+			</div>
+			<div class="info">
+				<div>
+					<p>EXHIBITION DATES</p>
+					<p>May 1st - 6th, 11am - 6pm</p>
+				</div>
+				<!-- <div>
+					<p>GALLERY HOURS</p>
+					<p>Mon - Sun: 11am - 6pm</p>
+				</div> -->
+			</div>
+		</div>
+		<div id="ripple"></div>
+	</div>
+		<a class="about" href="http://laurencould.be/?utm_source=apparently">About Lauren</a>
+		<button id="imgs">About the work</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+	    jQuery('#ripple').waterripple({onmove: true});
+	});
+
+		$('#imgs').magnificPopup({
+    items: [
+      {
+        src: 'https://vimeo.com/216571661',
+        type: 'iframe',
+      },
+     {
+        src: '../img/portfolio/apparently1.jpg',
+      },
+      {
+        src: '../img/portfolio/apparently2.jpg',
+      },
+      {
+        src: '../img/portfolio/apparently3.jpg',
+      },
+      {
+        src: '../img/portfolio/apparently4.jpg',
+      },
+      {
+        src: '../img/portfolio/apparently5.jpg',
+      },
+      {
+        src: '../img/portfolio/apparently6.jpg',
+      },
+    ],
+    gallery: {
+      enabled: true
+    },
+    type: 'image' // this is a default type
+});
+</script>
+
+</body>
+</html>
