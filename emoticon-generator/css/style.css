@@ -28,6 +28,7 @@ body {
   font-family: 'Cabin Sketch', cursive;
   font-weight: 400;
   position: absolute;
+  z-index: -1;
 }
 #prompt span {
   line-height: 3;
