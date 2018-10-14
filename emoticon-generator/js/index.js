@@ -28,12 +28,22 @@ document.getElementById('bg').onclick=function(e){
 
 function setupSynth() {
     window.polySynth = new Tone.MembraneSynth().toMaster();
+    polySynth.set({
+			"volume": -10,
+			"envelope" : {
+				"attack" : .5,
+				"decay"  : .2,
+				"sustain"  : .2,
+				"release": .2,
+				"attackCurve"  : "sine",
+			}
+		});
 }
 function boop() {
   if (!window.polySynth) {
     setupSynth();
   }
-  window.polySynth.triggerAttackRelease('Gb5', '16n');
+  window.polySynth.triggerAttackRelease('Db5', '16n');
 }
 function setupMsgSynth() {
 	window.msgTone = new Tone.MembraneSynth().toMaster();
