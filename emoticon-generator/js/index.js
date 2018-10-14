@@ -20,16 +20,47 @@ document.onkeypress=function(e){
 	run();
 }
 
-document.getElementById('bg').ontouchend=function(e){
+document.getElementById('bg').onclick=function(e){
 	if (copying == false){
 		run();
 	}	
+}
+
+function setupSynth() {
+    window.polySynth = new Tone.MembraneSynth().toMaster();
+}
+function boop() {
+  if (!window.polySynth) {
+    setupSynth();
+  }
+  window.polySynth.triggerAttackRelease('Gb5', '16n');
+}
+function setupMsgSynth() {
+	window.msgTone = new Tone.MembraneSynth().toMaster();
+			msgTone.set({
+				"envelope" : {
+					"attack" : .1,
+					"decay"  : .2,
+					"sustain"  : 0,
+					"release": 0,
+					"attackCurve"  : "sine",
+	}
+  });
+}
+function msgboop() {
+  if (!window.msgTone) {
+    setupMsgSynth();
+  }
+  window.msgTone.triggerAttackRelease('A5','8n');
+  
 }
 
 function run(){
 			// started = true;
 			document.getElementById('prompt').innerHTML = ' ';
 			generateEmoticon();
+				  boop();
+
 				// started = false;
 }
 
@@ -69,6 +100,8 @@ function getRndInteger(max, min) {
 out.addEventListener("click", () => {
 	// if (started) {
 		copying = true;
+				  msgboop();
+
 		const selection = window.getSelection();
 		const range = document.createRange();
 		range.selectNodeContents(out);
