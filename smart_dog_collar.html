@@ -13,43 +13,16 @@
  <link href="css/aos.css" rel="stylesheet">
  <!-- main style -->
  <link href="css/style.css" rel="stylesheet">
-
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55366341-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
+   <script src="js/includeHTML.js"></script>
+    <script src="js/GoogleAnalytics.js"></script>
 </head>
 <body>
 
  <!-- header -->
- <header class="navbar-fixed-top nav-down">
-  <nav>
-    <ul>
-      <li class="cubelogo v-center">
-        <a href="index.html">
-          <div id="logo"></div>
-        </a>
-      </li>
-      <li class="v-center">
-      <ul class="menu">
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#experience">Experience</a></li>
-          <li><a href="index.html#projects">Portfolio</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-
-      </li>
-    </ul>
-      </nav>
-</header>
+  <header class="navbar-fixed-top nav-down">
+    <nav include-html="header.html"></nav>
+  </header> 
 <!-- ./header -->
-
 
 <!--DEMO01-->
 <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID -->
@@ -74,16 +47,15 @@
           <h5>Ethnographic Observation:</h5>
           <img class="img-responsive" src="http://laurencould.be/wp-content/uploads/2016/05/dogs.jpg"/>
           <h5>Ideation Session:</h5>
-          <img class="img-responsive" src="http://laurencould.be/wp-content/uploads/2016/05/bs.jpg"/>
-          <img class="img-responsive" src="http://laurencould.be/wp-content/uploads/2016/05/3points.png"/>
+          <img class="img-responsive" src="https://66.media.tumblr.com/8a2f122dc7b8f0457ef81514d00e1058/tumblr_inline_o37567YuM01qcxioz_500.jpg"/>
           <h5>Persona &amp; Artifacts:</h5>
-          <img class="img-responsive" src="http://laurencould.be/wp-content/uploads/2016/05/persona.png"/>
+          <img class="img-responsive" src="https://66.media.tumblr.com/310aed18c74f9abecf69d96559de1fc3/tumblr_o5b5dcO4dX1uf0qq6o2_r1_1280.jpg"/>
           <h5>Product Descriptor:</h5>
           <p style="padding-left: 30px;">An assistant service for dog owners. Work with a smart dog collar. Purpose is to keep dogs healthy and prevent them becoming lost.</p>
           <img style="padding-left: 30px;" class="w-m img-responsive" src="img/portfolio/product.jpg"/>
 
           <h5>User Experience Map:</h5>
-          <img class="img-responsive" src="http://laurencould.be/wp-content/uploads/2016/05/map.jpg"/>
+          <img class="img-responsive" src="https://66.media.tumblr.com/7cd6c9d796330b5b684ab2517db02198/tumblr_o5b5dcO4dX1uf0qq6o1_r1_1280.jpg"/>
           <h5>Mind Map:</h5>
           <p style="padding-left: 60px;"><iframe src="https://www.mindomo.com/mindmap/dog-collar-9bf5fe48a1c145a19505cda14bd3d7b5" width=100% height="500" frameborder="0" allowfullscreen="allowfullscreen">Your browser does not support frames. View this <a href="https://www.mindomo.com/mindmap/dog-collar-9bf5fe48a1c145a19505cda14bd3d7b5" target="_blank"></a></iframe></p>
           <h5>Wireframe:</h5>
@@ -96,22 +68,9 @@
 <!-- </div> -->
        <!-- <div class="container"> -->
 
-<footer style="background-color: white">
+<footer style="background-color: white" include-html="footer.html"></footer>
 
-  <div class="container-fluid">
-    <ul class="social2">
-      <li><a href="https://www.facebook.com/LaurenVast/"><i class="ion-social-facebook"></i></a></li>
-      <li><a href="https://instagram.com/lauren_vast/"><i class="ion-social-instagram-outline"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/laurenwzr/"><i class="ion-social-linkedin"></i></a></li>
-      <li><a href="https://plus.google.com/u/0/+LaurenWang/"><i class="ion-social-googleplus"></i></a></li>
-      <li><a href="http://blog.laurencould.be/"><i class="ion-android-favorite"></i></a></li>
-    </ul>
-    <p class="copyright">© Lauren Wang 2016</p>
-  </div>
-</footer>
-  <!-- </div> -->
-
-
+<script type="text/javascript">includeHTML();</script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/aos.js"></script>

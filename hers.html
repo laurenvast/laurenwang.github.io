@@ -13,45 +13,19 @@
  <link href="css/aos.css" rel="stylesheet">
  <!-- main style -->
  <link href="css/style.css" rel="stylesheet">
-
+   <script src="js/includeHTML.js"></script>
+    <script src="js/GoogleAnalytics.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/p5.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.4/addons/p5.dom.min.js"></script>
  <script src="js/logo.js"></script>
 
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-55366341-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </head>
 <body>
 
  <!-- header -->
- <header class="navbar-fixed-top nav-down">
-  <nav>
-    <ul>
-      <li class="cubelogo v-center">
-        <a href="index.html">
-          <div id="logo"></div>
-        </a>
-      </li>
-      <li class="v-center">
-      <ul class="menu">
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#experience">Experience</a></li>
-          <li><a href="index.html#projects">Portfolio</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-
-      </li>
-    </ul>
-      </nav>
-</header>
+  <header class="navbar-fixed-top nav-down">
+    <nav include-html="header.html"></nav>
+  </header> 
 <!-- ./header -->
 
 
@@ -98,20 +72,10 @@
   </div>
 </div>
 
-<footer style="background-color: white">
 
-  <div class="container-fluid">
-    <ul class="social2">
-      <li><a href="https://www.facebook.com/LaurenVast/"><i class="ion-social-facebook"></i></a></li>
-      <li><a href="https://instagram.com/lauren_vast/"><i class="ion-social-instagram-outline"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/laurenwzr/"><i class="ion-social-linkedin"></i></a></li>
-      <li><a href="https://plus.google.com/u/0/+LaurenWang/"><i class="ion-social-googleplus"></i></a></li>
-      <li><a href="http://blog.laurencould.be/"><i class="ion-android-favorite"></i></a></li>
-    </ul>
-    <p class="copyright">© Lauren Wang 2017</p>
-  </div>
-</footer>
+<footer style="background-color: white" include-html="footer.html"></footer>
 
+<script type="text/javascript">includeHTML();</script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/aos.js"></script>
