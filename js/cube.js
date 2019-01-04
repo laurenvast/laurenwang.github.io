@@ -37,7 +37,7 @@ var cube = function(p){
     y6 = y + my;
     // fill(255, 0);
 
-    p.stroke(255, 191, 0);
+    p.stroke(222, 121, 96);
     p.strokeWeight(l/25);
 
     p.line(x1, y2, x4, y3);
@@ -123,7 +123,7 @@ var logo = function(p){
     var y5 = y3 + l;
     var y6 = y + my;
 
-    p.stroke(255, 191, 0);
+    p.stroke(222, 121, 96);
     p.strokeWeight(l / 15);
 
     p.line(x1, y2, x4, y3);

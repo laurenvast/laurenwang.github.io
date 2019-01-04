@@ -48,7 +48,7 @@ function draw() {
   var y5 = y3 + l;
   var y6 = y + my;
 
-  stroke(255, 191, 0);
+  stroke(222, 121, 96);
   strokeWeight(l / 15);
 
   line(x1, y2, x4, y3);
