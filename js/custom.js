@@ -28,8 +28,8 @@ $(window).load(function () {
     }
 
     
-        var j = [2, 4, 5, 6, 8, 10, 12];
-        var gif = ["goosecover.gif", "emoticon.gif", "opening2f.gif","but_th.gif", "knock.gif", "tri.gif", "lushth.gif"];
+        var j = [2, 4, 5, 7, 9];
+        var gif = ["goosecover.gif", "emoticon.gif", "but_th.gif", "knock.gif", "tri.gif"];//"opening2f.gif", "lushth.gif"
 
         var image0 = document.images[j[0]];
         var downloadingImage = new Image();
@@ -66,20 +66,6 @@ $(window).load(function () {
             image4.src = this.src;   
         };
         downloadingImage.src = "../img/portfolio/"+ gif[4];
-
-        var image5 = document.images[j[5]];
-        var downloadingImage = new Image();
-        downloadingImage.onload = function(){
-            image5.src = this.src;   
-        };
-        downloadingImage.src = "../img/portfolio/"+ gif[5];
-
-        var image6 = document.images[j[6]];
-        var downloadingImage = new Image();
-        downloadingImage.onload = function(){
-            image6.src = this.src;   
-        };
-        downloadingImage.src = "../img/portfolio/"+ gif[6];
 })
 
 $(document).ready(function () {
