@@ -28,7 +28,7 @@ $(window).load(function () {
     }
 
     
-        var j = [3, 5, 6, 7, 9, 11, 13];
+        var j = [2, 4, 5, 6, 8, 10, 12];
         var gif = ["goosecover.gif", "emoticon.gif", "opening2f.gif","but_th.gif", "knock.gif", "tri.gif", "lushth.gif"];
 
         var image0 = document.images[j[0]];
