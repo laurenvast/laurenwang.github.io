@@ -664,8 +664,13 @@ a.active {
 .portfolio .categories-grid .categories ul li a:hover,
 .portfolio .categories-grid .categories ul li a:focus {
     text-decoration: none;
+    color: #de7960;
+    transition: none;
 }
 
+.portfolio .categories-grid .categories ul li a:active {
+    transition: all .2s ease-in-out .2s;
+}
 .portfolio .categories-grid .categories ul li a.active {
     background-color: #de7960;
     padding: 0px 20px;
@@ -768,6 +773,7 @@ a.active {
     margin: 0 auto;
     text-align: center;
 }
+
 
 .portfolio_item img {
    /* -webkit-filter: grayscale(100%);
@@ -1128,4 +1134,51 @@ position: relative;
 a.imgbtn:hover {
     box-shadow: 0 0 40px #888888;
 
+}
+
+.portfolio_item {
+    border-radius: 0px;
+}
+.portfolio_item:hover {
+    box-shadow: rgba(222, 121, 96,.25) 0 10px 40px;
+        border-radius: 6px;
+
+    transform: scale(1.1);
+    transition: all 250ms ease;
+}
+.portfolio_item .item_info {
+        line-height: 1.3;
+
+}
+
+.portfolio_item .item_info span {
+    display: block;
+    color: #60606e;
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 5px;
+
+}
+
+.portfolio_item .item_info em {
+    font-style: normal;
+    color: #60606e;
+    /*margin-top: 10px;*/
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.portfolio_item > .clearfix {
+    padding: 10px 15px;
+    height: 6em;
+}
+
+.NDA {
+    font-size: 1.5em;
+    padding: 50px;
+    margin: 10px 10px 0 10px;
+    line-height: 1.5;
+    background: rgba(222, 121, 96,.15);
 }

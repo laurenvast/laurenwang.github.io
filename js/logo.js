@@ -5,7 +5,7 @@ function setup() {
  canvasWidth = logo.width,
  canvasHeight = logo.height;
 
- console.log(logo);
+ // console.log(logo);
  print(canvasWidth + ', ' + canvasHeight);
 
  createCanvas(canvasWidth, canvasHeight).parent('logo');
