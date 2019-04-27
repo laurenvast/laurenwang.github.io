@@ -119,6 +119,11 @@ body {
     line-height: 50px
 }
 
+.size-16 {
+    font-size: 16px;
+    line-height: 3;
+}
+
 .h-50 {
     height: 50px;
 }
@@ -678,10 +683,6 @@ a.active {
     text-decoration: none;
 }
 
-.portfolio_filter {
-    padding-left: 0;
-}
-
 .portfolio_item {
     position: relative;
     overflow: hidden;
@@ -768,9 +769,10 @@ a.active {
 }
 
 .portfolio_filter {
-    padding-left: 0;
-    display: inline-block;
-    margin: 0 auto;
+    /*padding-left: 0;*/
+    /*display: inline-block;*/
+    /*margin: 0 auto;*/
+    margin: auto;
     text-align: center;
 }
 
