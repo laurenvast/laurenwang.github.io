@@ -118,7 +118,10 @@ body {
     font-size: 50px;
     line-height: 50px
 }
-
+.size-16 {
+    font-size: 16px;
+    line-height: 3;
+}
 .h-50 {
     height: 50px;
 }
@@ -678,10 +681,6 @@ a.active {
     text-decoration: none;
 }
 
-.portfolio_filter {
-    padding-left: 0;
-}
-
 .portfolio_item {
     position: relative;
     overflow: hidden;
@@ -768,21 +767,11 @@ a.active {
 }
 
 .portfolio_filter {
-    padding-left: 0;
-    display: inline-block;
-    margin: 0 auto;
+    /*display: inline-block;*/
+    margin: auto;
     text-align: center;
 }
 
-
-.portfolio_item img {
-   /* -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);*/
-}
-
-.portfolio-padding {
-    /*padding: 120px 0;*/
-}
 
 .portfolio-inner {
     padding-bottom: 0 !important;
