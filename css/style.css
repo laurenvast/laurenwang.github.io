@@ -1182,9 +1182,9 @@ a.imgbtn:hover {
 }
 
 .NDA {
-    font-size: 1.2em;
+    font-size: 1.19em;
     padding: 1.5em;
-    margin: 10px 10px 0 10px;
+float: none;
     line-height: 1.5;
-    background: rgba(212, 72, 37,.15);
+    background: rgba(212, 72, 37,.1);
 }
