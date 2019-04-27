@@ -471,7 +471,16 @@ a.active {
     top: 40px;
     /*left: 10px;*/
     right: 100px;
-    z-index: 1
+    z-index: 1;
+    transition: height 350ms ease, top 350ms ease, right 350ms ease;
+}
+
+.about-border:hover {
+    height: 490px;
+    top: 10px;
+    right: 25px;
+    transition: height 300ms ease, top 300ms ease, right 300ms ease;
+
 }
 
 
@@ -648,15 +657,16 @@ a.active {
     -webkit-transition: box-shadow 0.5s ease-in 0.1s;
     transition: box-shadow 0.5s ease-in 0.1s;
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     background-color: #d44825;
     box-shadow: inset 0 0 0 0em #555;
     /*display: inline-block;*/
     display: flex;
     padding: 0.5em 1em;
-    width: 140px;
+    width: 15em;
     justify-content: center;
+    text-transform: uppercase;
 }
 
 .ion-paperclip {
@@ -1188,4 +1198,8 @@ a.imgbtn:hover {
 float: none;
     line-height: 1.5;
     background: rgba(212, 72, 37,.1);
+}
+
+.cp_embed_wrapper {
+    transform: scale(.8);
 }
