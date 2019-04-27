@@ -132,6 +132,48 @@ body {
 /* preloader
 ==================================================*/
 
+
+.type{
+    display: none;
+        position: relative;
+    animation-name: slide;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes slide {
+  0% {top:-80px; opacity:0}
+  20% {top:0; opacity:1}
+  80% {top:0; opacity:1}
+  100% {top:70px; opacity:0}
+}
+
+.designer {
+    display: -webkit-box;
+overflow: hidden;
+    height: 300px;
+}
+
+.design {
+    padding-left: 30px;
+}
+
+
+#cube {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: .7;
+}
+
+.cubelogo {
+    margin: 0;
+}
+
+
 #preloader {
     position: fixed;
     top: 0;
@@ -391,19 +433,6 @@ a.active {
   to {
     visibility: hidden;
   }
-}
-
-
-#cube {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: .8;
-}
-
-.cubelogo {
-    margin: 0;
 }
 
 
@@ -999,32 +1028,6 @@ fieldset {
     color: #d44825;
 }
 
-.type{
-    display: none;
-        position: relative;
-    animation-name: slide;
-  animation-duration: 2s;
-  animation-direction: normal;
-  animation-timing-function: ease;
-  animation-iteration-count: infinite;
-}
-
-@keyframes slide {
-  0% {top:-80px; opacity:0}
-  20% {top:0; opacity:1}
-  80% {top:0; opacity:1}
-  100% {top:70px; opacity:0}
-}
-
-.designer {
-    display: -webkit-box;
-overflow: hidden;
-    height: 300px;
-}
-
-.design {
-    padding-left: 30px;
-}
 
 /* Responsive media queries
 ==================================================*/
