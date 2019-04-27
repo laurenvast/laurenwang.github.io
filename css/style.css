@@ -214,11 +214,9 @@ overflow: hidden;
     top: -1px;
     height: 100%;
     width: 100%;
-    -webkit-animation: rotation 1s linear infinite;
-    animation: rotation 1s linear infinite;
-    border: 2px solid #d44825;
-    border-top: 2px solid transparent;
-    border-radius: 100%
+    -webkit-animation: wink 1s ease infinite;
+    animation: wink 1s ease infinite;
+    border: 5px solid #d44825;
 }
 
 .preloader>.icon {
@@ -243,7 +241,7 @@ overflow: hidden;
     .preloader:before {
         left: -2px;
         top: -2px;
-        border-width: 2px
+        border-width: 5px
     }
     .preloader>.icon {
         height: 37.5px;
