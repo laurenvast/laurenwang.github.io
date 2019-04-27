@@ -26,47 +26,19 @@ $(window).load(function () {
         x[myIndex-1].style.display = "block";  
         setTimeout(carousel, 2000); // Change image every 2 seconds
     }
-
-    
-        var j = [2, 4, 5, 7, 8];
-        var gif = ["goosecover.gif", "emoticon.gif", "but_th.gif", "knock.gif", "tri.gif"];//"opening2f.gif", "lushth.gif"
-
-        var image0 = document.images[j[0]];
-        var downloadingImage = new Image();
-        downloadingImage.onload = function(){
-            image0.src = this.src;   
-        };
-
-        downloadingImage.src = "../img/portfolio/"+ gif[0];
-     
-        var image1 = document.images[j[1]];
-        var downloadingImage = new Image();
-        downloadingImage.onload = function(){
-            image1.src = this.src;   
-        };
-        downloadingImage.src = "../img/portfolio/"+ gif[1];
-
-        var image2 = document.images[j[2]];
-        var downloadingImage = new Image();
-        downloadingImage.onload = function(){
-            image2.src = this.src;   
-        };
-        downloadingImage.src = "../img/portfolio/"+ gif[2];
-
-        var image3 = document.images[j[3]];
-        var downloadingImage = new Image();
-        downloadingImage.onload = function(){
-            image3.src = this.src;   
-        };
-        downloadingImage.src = "../img/portfolio/"+ gif[3];
-
-        var image4 = document.images[j[4]];
-        var downloadingImage = new Image();
-        downloadingImage.onload = function(){
-            image4.src = this.src;   
-        };
-        downloadingImage.src = "../img/portfolio/"+ gif[4];
 })
+
+window.onload = reloadGif();
+
+function reloadGif() {
+
+    var gifs = document.querySelectorAll('a.gif > img');
+
+    for (var i = gifs.length - 1; i >= 0; i--) {
+        var url = gifs[i].src;
+        gifs[i].src = url.split('.').slice(0, -1).join('.') + '.gif';
+    }
+}
 
 $(document).ready(function () {
     "use strict";
