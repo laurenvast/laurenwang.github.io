@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(212, 72, 37);
 
   var x = width / 2;
   var y = height / 2;
@@ -48,8 +48,8 @@ function draw() {
   var y5 = y3 + l;
   var y6 = y + my;
 
-  stroke(212, 72, 37);
-  strokeWeight(l / 15);
+  stroke(255);
+  strokeWeight(2);
 
   line(x1, y2, x4, y3);
   line(x4, y3, x4, y5);

@@ -160,13 +160,17 @@ body {
     padding-left: 30px;
 }
 
+.description {
+    line-height: 1.5;
+    max-width: 20em;
+}
 
 #cube {
   position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: .5;
+  opacity: .3;
 }
 
 .cubelogo {
@@ -351,6 +355,8 @@ nav li a {
     color: #444;
     font-size: 11px;
     font-weight: bold;
+    height: 100%;
+    display: inline-block;
 }
 
 .bg-nav {
@@ -378,6 +384,8 @@ nav li a {
 a:focus {
     color: #444;
     text-decoration: none;
+            border-bottom: solid;
+
 }
 
 a:hover {
@@ -387,32 +395,35 @@ a:hover {
 
 a.active {
     color: #d44825;
+        border-bottom: solid;
+
 }
 
 .linkwrap { position:relative; display:inline-block; }
 .blocker { position:absolute; height:100%; width:100%; z-index:1; }
 .linkwrap iframe { z-index: 2; }
 
-#logo {
-    width: 84px;
-    height: 50px;
+#logo2, #logo {
+    width: 100px;
+    height: 100px;
     margin: auto;
     transition-timing-function: ease-in-out;
 }
 
-#logo2 {
-    width: 84px;
-    height: 50px;
-    margin: auto;
-    transition-timing-function: ease-in-out;
+#logoicon {
+    background-image: url(../img/logoicon.png);
+    background-size: cover;
+    width: 24px;
+    height: 100%;
 }
-
-
 .menu {
-    display: inline-block;
-    padding: 10px;
+    display: flex;
+    padding: 15px;
 }
 
+.menu > li {
+    height: 24px;
+}
 .v-center {
     display: flex;
     align-items: center;
@@ -684,7 +695,8 @@ a.active {
 ==================================================*/
 
 #projects {
-    padding: 100px 0;
+    /*padding: 100px 0;*/
+    padding-top: 100px;
     background: white;
 }
 
@@ -706,6 +718,7 @@ a.active {
     margin: 0 14px;
     -webkit-transition: all .2s ease-in-out .2s;
     transition: all .2s ease-in-out .2s;
+
 }
 
 .portfolio .categories-grid .categories ul li a:hover,
@@ -719,10 +732,11 @@ a.active {
     transition: all .2s ease-in-out .2s;
 }
 .portfolio .categories-grid .categories ul li a.active {
-    background-color: #d44825;
-    padding: 0px 20px;
-    color: white;
-    text-decoration: none;
+    /*background-color: #d44825;*/
+    /*padding: 0px 20px;*/
+    color: #d44825;
+    border-bottom: solid;
+    /*text-decoration: none;*/
 }
 
 .portfolio_item {
@@ -860,7 +874,14 @@ a.active {
 
 }
 
+#moreproject {
+    background: #eeeeee;
+}
 
+.videos {
+    width: 100%;
+    height: 360px;
+}
 /* contact
 ==================================================*/
 
@@ -981,7 +1002,7 @@ fieldset {
 }
 
 .social {
-    /*padding-left: 0;*/
+    padding-left: 0;
     list-style: none;
     margin-top: 50px;
 
@@ -999,21 +1020,21 @@ fieldset {
 
     width: 48px;
     line-height: 48px;
-    color: #555;
+    color: white;
     font-size: 36px;
     /*margin-right: 20px;*/
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     display: block;
     text-align: center;
-      box-shadow: inset 0 0 0 0em #d44825;
+      box-shadow: inset 0 0 0 0em white;
 
 
 }
 
 .social li a:hover {
-    color: white;
-    box-shadow: inset 48px 0 0 0em #d44825;
+    color: #d44825;
+    box-shadow: inset 48px 0 0 0em white;
 
     /*background: #d44825;*/
     /*border: #d44825 3px solid;*/
@@ -1051,6 +1072,10 @@ fieldset {
     .portfolio .categories-grid .categories ul li a {
         padding: 0 2px;
     }
+
+        .about-img-div {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1063,12 +1088,12 @@ fieldset {
 @media (max-width: 500px) {
     h1 {
         font-family: 'Scope One', serif;
-        font-size: 50px;
+        font-size: 45px;
         line-height: 50px;
     }
     #home,
     .disply-table {
-        height: 600px;
+        /*height: 600px;*/
     }
     .about-border {
         width: 265px;
@@ -1087,12 +1112,19 @@ fieldset {
     .type {
 	animation-name: slidem;
     }
+    .videos {
+        width: 100%;
+        height: 240px;
+    }
+    .resume-event-thumbnail {
+        width: 100%;
+    }
     @keyframes slidem {
-  0% {top:-50px; opacity:0}
-  20% {top:0; opacity:1}
-  80% {top:0; opacity:1}
-  100% {top:30px; opacity:0}
-}
+      0% {top:-50px; opacity:0}
+      20% {top:0; opacity:1}
+      80% {top:0; opacity:1}
+      100% {top:30px; opacity:0}
+    }
 }
 
 @media (max-width: 420px) {
@@ -1107,11 +1139,12 @@ fieldset {
 footer {
     padding: 30px 0;
     text-align: center;
-    background: #f3f3f3
+    background: #d44825;
 }
 
 .copyright {
-    color: #ccc;
+    color: white;
+    opacity: .7;
     margin-bottom: 0;
     font-size: 13px;
 }
