@@ -16,7 +16,7 @@ var cube = function(p){
 
     var x, y, l, m, mx, my, x1, x2, x3, x4, y1, y2, y3, y4, y5, y6;
 
-    x = p.width / 5 * 3;
+    x = p.width / 7 * 5;
     y = p.height / 2;
     l = (p.height + p.width) / 2 / 4;
 
@@ -88,7 +88,7 @@ var logo = function(p){
   p.draw = function() {
 
     // console.log(p.width);
-    p.background(255);
+    p.background(212, 72, 37);
 
     var x = p.width / 2;
     var y = p.height / 2;
@@ -123,8 +123,8 @@ var logo = function(p){
     var y5 = y3 + l;
     var y6 = y + my;
 
-    p.stroke(212, 72, 37);
-    p.strokeWeight(l / 15);
+    p.stroke(255);
+    p.strokeWeight(2);
 
     p.line(x1, y2, x4, y3);
     p.line(x4, y3, x4, y5);

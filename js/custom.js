@@ -51,42 +51,42 @@ $(document).ready(function () {
         window_height = window.innerHeight - nav_height;
 
     $(window).on('scroll', function () {
-        var cur_pos = $(this).scrollTop();
+        // var cur_pos = $(this).scrollTop();
 
         sections.each(function () {
             var top = $(this).offset().top - nav_height,
                 bottom = top + $(this).outerHeight();
 
-            if (cur_pos >= top && cur_pos <= bottom) {
-                nav.find('a').removeClass('active');
-                sections.removeClass('active');
+            // if (cur_pos >= top && cur_pos <= bottom) {
+            //     nav.find('a').removeClass('active');
+            //     sections.removeClass('active');
 
-                $(this).addClass('active');
-                nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
-            }
+            //     $(this).addClass('active');
+            //     nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+            // }
 
 
-            if(cur_pos > window_height-10){
+            // if(cur_pos > window_height-10){
 
-                $('#logo').css( "width", w);
-                $('#defaultCanvas1').css( "width", w);
-                w++;
-                if (w>= 84){
-                    w = 84;
-                }
+            //     $('#logo').css( "width", w);
+            //     $('#defaultCanvas1').css( "width", w);
+            //     w++;
+            //     if (w>= 84){
+            //         w = 84;
+            //     }
 
-             }else{
-                $('#logo').css( "width", w);
-                $('#defaultCanvas1').css( "width", w);
-                 w--;
-                if (w<=0){
-                    w = 0;
-                } 
-            }
+            //  }else{
+            //     $('#logo').css( "width", w);
+            //     $('#defaultCanvas1').css( "width", w);
+            //      w--;
+            //     if (w<=0){
+            //         w = 0;
+            //     } 
+            // }
 
-            if ($(window).scrollTop() < 10) {
-            w = 0;
-            }
+            // if ($(window).scrollTop() < 10) {
+            // w = 0;
+            // }
         });
     });
 
