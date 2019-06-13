@@ -51,19 +51,19 @@ $(document).ready(function () {
         window_height = window.innerHeight - nav_height;
 
     $(window).on('scroll', function () {
-        // var cur_pos = $(this).scrollTop();
+        var cur_pos = $(this).scrollTop();
 
         sections.each(function () {
             var top = $(this).offset().top - nav_height,
                 bottom = top + $(this).outerHeight();
 
-            // if (cur_pos >= top && cur_pos <= bottom) {
-            //     nav.find('a').removeClass('active');
-            //     sections.removeClass('active');
+            if (cur_pos >= top && cur_pos <= bottom) {
+                nav.find('a').removeClass('active');
+                sections.removeClass('active');
 
-            //     $(this).addClass('active');
-            //     nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
-            // }
+                $(this).addClass('active');
+                nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
+            }
 
 
             // if(cur_pos > window_height-10){
@@ -101,23 +101,6 @@ $(document).ready(function () {
         return false;
     });
 
-
-    // Menu opacity
-    if ($(window).scrollTop() > window_height/2) {
-        $(".navbar-fixed-top").addClass("bg-nav");
-    } else {
-        $(".navbar-fixed-top").removeClass("bg-nav");
-    }
-    $(window).scroll(function () {
-        if ($(window).scrollTop() > window_height/2) {
-            $(".navbar-fixed-top").addClass("bg-nav");
-        } else {
-            $(".navbar-fixed-top").removeClass("bg-nav");
-        }
-    });
-
-
-
     // Parallax
     var parallax = function () {
         $(window).stellar();
@@ -136,6 +119,30 @@ $(document).ready(function () {
 
     //  isotope
     $('#projects').waitForImages(function () {
+        var $container = $('.portfolio_container');
+        $container.isotope({
+            filter: '.biz',
+        });
+
+        $('.portfolio_filter a').click(function () {
+            $('.portfolio_filter .active').removeClass('active');
+            $(this).addClass('active');
+
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 500,
+                    animationEngine: "jquery"
+                }
+            });
+            return false;
+        });
+
+    });
+
+    //  isotope
+    $('#moreproject').waitForImages(function () {
         var $container = $('.portfolio_container');
         $container.isotope({
             filter: '.biz',

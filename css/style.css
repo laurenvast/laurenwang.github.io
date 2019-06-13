@@ -162,7 +162,8 @@ body {
 
 .description {
     line-height: 1.5;
-    max-width: 20em;
+    max-width: 25em;
+        letter-spacing: 1px;
 }
 
 #cube {
@@ -415,6 +416,11 @@ a.active {
     background-size: cover;
     width: 24px;
     height: 100%;
+}
+
+.space{
+    flex-grow: 1;
+    pointer-events: none;
 }
 .menu {
     display: flex;
@@ -1197,8 +1203,8 @@ a.imgbtn:hover {
     border-radius: 0px;
 }
 .portfolio_item:hover {
-    box-shadow: rgba(222, 121, 96,.25) 0 10px 40px;
-        border-radius: 6px;
+    box-shadow: #d44825 0 0 0 8px;
+        /*border-radius: 6px;*/
 
     transform: scale(1.1);
     transition: all 250ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
@@ -1229,7 +1235,7 @@ a.imgbtn:hover {
 
 .portfolio_item > .clearfix {
     padding: 10px 15px;
-    height: 6em;
+    /*height: 6em;*/
 }
 
 .NDA {
