@@ -9,8 +9,8 @@ $(window).load(function () {
         'overflow': 'visible'
     });
 
-    var myIndex = 0;
-    carousel();
+    // var myIndex = 0;
+    // carousel();
 
     // function carousel() {
     //     var i;
