@@ -142,28 +142,28 @@ $(document).ready(function () {
     });
 
     //  isotope
-    // $('#moreproject').waitForImages(function () {
-    //     var $container = $('.portfolio_container');
-    //     $container.isotope({
-    //         filter: '.biz',
-    //     });
+    $('#moreproject').waitForImages(function () {
+        var $container = $('.portfolio_container');
+        $container.isotope({
+            filter: '.biz',
+        });
 
-    //     $('.portfolio_filter a').click(function () {
-    //         $('.portfolio_filter .active').removeClass('active');
-    //         $(this).addClass('active');
+        $('.portfolio_filter a').click(function () {
+            $('.portfolio_filter .active').removeClass('active');
+            $(this).addClass('active');
 
-    //         var selector = $(this).attr('data-filter');
-    //         $container.isotope({
-    //             filter: selector,
-    //             animationOptions: {
-    //                 duration: 500,
-    //                 animationEngine: "jquery"
-    //             }
-    //         });
-    //         return false;
-    //     });
+            var selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    duration: 500,
+                    animationEngine: "jquery"
+                }
+            });
+            return false;
+        });
 
-    // });
+    });
 
     //animatedModal
     $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
