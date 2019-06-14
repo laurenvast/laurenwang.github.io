@@ -12,20 +12,20 @@ $(window).load(function () {
     var myIndex = 0;
     carousel();
 
-    function carousel() {
-        var i;
-        var x = document.getElementsByClassName("type");
-        // var w = [30, 38, 42, 38, 35];
-        for (i = 0; i < x.length; i++) {
-           x[i].style.display = "none";  
-        }
-        myIndex++;
-        // $('.design').css("transition","padding-left 1s ease");
-        if (myIndex > x.length) {myIndex = 1}    
-                // $('.design').css("padding-left", w[myIndex-1]+"px");
-        x[myIndex-1].style.display = "block";  
-        setTimeout(carousel, 2000); // Change image every 2 seconds
-    }
+    // function carousel() {
+    //     var i;
+    //     var x = document.getElementsByClassName("type");
+    //     // var w = [30, 38, 42, 38, 35];
+    //     for (i = 0; i < x.length; i++) {
+    //        x[i].style.display = "none";  
+    //     }
+    //     myIndex++;
+    //     // $('.design').css("transition","padding-left 1s ease");
+    //     if (myIndex > x.length) {myIndex = 1}    
+    //             // $('.design').css("padding-left", w[myIndex-1]+"px");
+    //     x[myIndex-1].style.display = "block";  
+    //     setTimeout(carousel, 2000); // Change image every 2 seconds
+    // }
 })
 
 window.onload = reloadGif();
