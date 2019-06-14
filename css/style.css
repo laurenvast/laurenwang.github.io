@@ -237,6 +237,10 @@ body {
 }
 
 @media only screen and (min-width:768px) {
+
+    header {
+        top: 0 !important;  
+    }
     .preloader {
         height: 60px;
         width: 60px;
@@ -323,9 +327,9 @@ body {
 
 header {
     text-align: center;
-    /*-webkit-transition: all .5s;*/
-    /*transition: all .5s;*/
-    /*height: 65px;*/
+/*    -webkit-transition: all .5s;
+*//*    transition: all .5s;
+*/    /*height: 65px;*/
 
     position: fixed;
     top: 0;
@@ -354,7 +358,7 @@ nav li a {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #444;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     height: 100%;
     display: inline-block;
@@ -371,7 +375,7 @@ nav li a {
 
 .scroll-nav {
     background: #fff;
-    border-bottom: 1px solid #f3f3f3
+    border-bottom: 1px solid #f3f3f3;
 }
 
 .scroll-nav ul {
@@ -379,7 +383,7 @@ nav li a {
 }
 
 .nav-up {
-/*    top: -65px;*/
+    /*top: -65px;*/
 }
 
 a:focus {
@@ -424,8 +428,7 @@ a.active {
 }
 .menu {
     display: flex;
-    padding: 15px;
-    padding-bottom: 0;
+    padding: 15px 5px;
 }
 
 .menu > li {
@@ -1138,9 +1141,9 @@ fieldset {
     nav li {
         margin: 6px;
     }
-    nav li a {
-        font-size: 10px;
-    }
+/*    nav li a {
+        font-size: 13px;
+    }*/
 }
 
 footer {
@@ -1200,6 +1203,28 @@ a.imgbtn:hover {
 
 }
 
+/*.wide > a.portfolio_item {
+    display: flex;
+    justify-content: center;
+}
+
+.wide > a.portfolio_item > img {
+    width: 25%;
+        height: 25%;
+
+
+}
+
+.wide > a.portfolio_item > .clearfix {
+    padding-left: 30px;
+    width: 500px;
+         border-top: none;
+}
+*/
+a.portfolio_item {
+    border: none;
+}
+
 .portfolio_item {
     border-radius: 0px;
         transition: all 100ms ease-in-out;
@@ -1208,7 +1233,7 @@ a.imgbtn:hover {
     box-shadow: rgba(212, 72, 37, .3)  0 0 0 8px;
         /*border-radius: 6px;*/
 
-    transform: scale(1.09);
+    transform: scale(1.07);
     transition: all 100ms ease-in-out;
 }
 .portfolio_item .item_info {
