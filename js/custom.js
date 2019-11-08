@@ -46,7 +46,7 @@ $(document).ready(function () {
 
     // scroll menu
     var sections = $('.section'),
-        nav = $('.navbar-fixed-top,footer'),
+        nav = $('.navbar-fixed-top,footer,.postnav'),
         nav_height = nav.outerHeight(),
         window_height = window.innerHeight - nav_height;
 
@@ -100,6 +100,7 @@ $(document).ready(function () {
 
         return false;
     });
+
 
     // Parallax
     var parallax = function () {
