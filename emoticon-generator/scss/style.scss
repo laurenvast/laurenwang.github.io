@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:400,700|M+PLUS+Rounded+1c');
+
+body,
+html,
+#bg {
+	height: 100%;
+	width: 100%;
+}
+
+#bg {
+	position: absolute;
+}
+
+body {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	
+	font-family: 'Cabin Sketch', cursive;
+	font-weight: 700;
+	
+	background: linear-gradient(135deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+#prompt {
+	text-align: center;
+	font-size: 4em;
+	line-height: 1.35;
+	color: white;
+	text-shadow: #b64e85 .04em .05em 0;
+	font-family: 'Cabin Sketch', cursive;
+	font-weight: 400;
+	position: absolute;
+	
+	span {
+		line-height: 3;
+			font-size: .7em;
+
+	}
+
+}
+
+.emoticon {
+	display: flex;
+	font-size: 4em;
+	border-radius: 4em;
+	padding: 0 .5em;
+	line-height: 1.5;
+	z-index: 10;
+	
+	p {
+		margin: 0;
+	}
+	
+	&:hover {
+		background-color: rgba(255,255,255,.7);
+	}
+
+}
+
+#message {
+	position: fixed;
+	top: 30%;
+	
+	font-size: 20px;
+	font-weight: 400;
+	font-family: 'M PLUS Rounded 1c';
+
+	opacity: 0;
+	transition: 1s all ease-in;
+
+	&.show {
+		opacity: .8;
+		transition: .5s all ease;
+	}
+}
+
+
+@media only screen and (max-width: 600px) {
+    #prompt {
+			font-size: 3.5em;
+	}
+	.emoticon {
+			font-size: 2.2em;
+	}
+}
+
+a {
+	position: fixed;
+	top: 1em;
+	right: 1em;
+	font-size: 1em;
+	font-weight: 400;
+	color: rgba(0,0,0,.25);
+	text-decoration: none;
+	line-height: 2;
+	padding: 0 .7em;
+	border-radius: 1em;
+	
+	&:hover {
+		background-color: rgba(255,255,255,.7);
+			color: rgba(0,0,0,.7);
+		}
+	}
