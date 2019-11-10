@@ -4,16 +4,16 @@
           <div id="logo2"></div>
     </div>
     <ul class="social">
-        <li><a href="https://instagram.com/{{ site.instagram_username }}/"><i class="ion-social-instagram-outline"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/"><i class="ion-social-linkedin"></i></a></li>
-        <li><a href="http://codepen.io/{{ site.codepen_username }}/"><i class="ion-social-codepen-outline"></i></a></li>
+        <li><a href="https://instagram.com/{{ site.instagram_username }}/" target="_blank"><i class="ion-social-instagram-outline"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}/" target="_blank"><i class="ion-social-linkedin"></i></a></li>
+        <li><a href="http://codepen.io/{{ site.codepen_username }}/" target="_blank"><i class="ion-social-codepen-outline"></i></a></li>
         <li><a onClick="javascript:window.open('mailto:{{ site.email }}', 'mail');event.preventDefault()" href="mailto:{{ site.email }}"><i class="ion-email"></i></a></li>
     </ul>
 
     <!-- <div class="clearfix"></div> -->
     </div>
     <div class="container-fluid">
-        <p class="copyright">© {{ site.author }} 2019</p>
+        <p class="copyright">© {{ site.author }} {{ 'now' | date: "%Y" }}</p>
     </div>
 </footer>
 <!-- jQuery -->
