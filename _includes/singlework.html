@@ -2,7 +2,7 @@
 
  <!-- single work -->
 <div class=" {{ post.cols }} {{ post.categories }}">
-    <a href="{{ post.url | relative_url }}" class="portfolio_item"> <img src="{{ post.thumb }}" alt="image" class="img-responsive" loading="lazy"/>
+    <a href="{{ post.url | relative_url }}" class="portfolio_item"> <img src="{{ post.thumb }}" alt="image" class="img-responsive"/>
             <div class="portfolio-border clearfix">
                 <div class="item_info">
                     {%- assign date_format = site.minima.date_format | default: "%Y" -%}
