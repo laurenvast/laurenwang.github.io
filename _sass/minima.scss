@@ -534,6 +534,16 @@ a.active {
 #about {
     background: white;
     padding: 50px 0;
+
+    p{
+        letter-spacing: .02em;
+        color: rgba(black, .7);
+    }
+
+    .CTA-event-thumbnail {
+            color: white;
+    }
+
 }
 
 .about-img-div img {
@@ -690,72 +700,6 @@ a.active {
     padding: 0.25em 1em 0.2em 1em;
 }
 
-
-.resume-event {
-    position: relative;
-}
-
-.resume-event:hover .resume-event-icon {
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    background-color: $main-color;
-}
-
-.resume-event:hover .resume-event-thumbnail {
-    box-shadow: inset 80em 0 0 0 $main-color;
-}
-
-.resume-event-copy {
-    padding: 2em;
-    position: relative;
-    top: -1.875em;
-    left: 4em;
-    width: 100%;
-}
-
-.resume-event-icon {
-    -webkit-transition: -webkit-transform 0.2s ease-in;
-    transition: -webkit-transform 0.2s ease-in;
-    transition: transform 0.2s ease-in;
-    transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    background-color: $main-color;
-    outline: 10px solid #f3f3f3;
-    display: block;
-    margin: 0.5em 0.5em 0.5em -0.5em;
-    position: absolute;
-    top: 0;
-    left: 2em;
-    width: 1em;
-    height: 1em;
-}
-
-.resume-event-thumbnail {
-    -moz-transition: box-shadow 0.5s ease-in 0.1s;
-    -o-transition: box-shadow 0.5s ease-in 0.1s;
-    -webkit-transition: box-shadow 0.5s ease-in;
-    -webkit-transition-delay: 0.1s;
-    -webkit-transition: box-shadow 0.5s ease-in 0.1s;
-    transition: box-shadow 0.5s ease-in 0.1s;
-    color: white;
-    font-size: 16px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    background-color: $main-color;
-    box-shadow: inset 0 0 0 0em #555;
-    /*display: inline-block;*/
-    display: flex;
-    padding: .7em;
-    width: 15em;
-    justify-content: center;
-    text-transform: uppercase;
-}
-
-.ion-paperclip {
-    font-size: 21px;
-    padding-right: 13px;
-}
 /* projects section
 ==================================================*/
 
@@ -957,6 +901,82 @@ a.active {
     height: 360px;
     border: none;
 }
+
+
+
+.CTA-event {
+        position: relative;
+    }
+
+    .CTA-event:hover .CTA-event-icon {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        background-color: $main-color;
+    }
+
+    .CTA-event:hover .CTA-event-thumbnail {
+        box-shadow: inset 80em 0 0 0 $main-color;
+    }
+
+    .CTA-event-copy {
+        padding: 2em;
+        position: relative;
+        top: -1.875em;
+        left: 4em;
+        width: 100%;
+    }
+
+    .CTA-event-icon {
+        -webkit-transition: -webkit-transform 0.2s ease-in;
+        transition: -webkit-transform 0.2s ease-in;
+        transition: transform 0.2s ease-in;
+        transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        background-color: $main-color;
+        outline: 10px solid #f3f3f3;
+        display: block;
+        margin: 0.5em 0.5em 0.5em -0.5em;
+        position: absolute;
+        top: 0;
+        left: 2em;
+        width: 1em;
+        height: 1em;
+    }
+
+    .CTA-event-thumbnail {
+        -moz-transition: box-shadow 0.5s ease-in 0.1s;
+        -o-transition: box-shadow 0.5s ease-in 0.1s;
+        -webkit-transition: box-shadow 0.5s ease-in;
+        -webkit-transition-delay: 0.1s;
+        -webkit-transition: box-shadow 0.5s ease-in 0.1s;
+        transition: box-shadow 0.5s ease-in 0.1s;
+        color: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        background-color: $main-color;
+        box-shadow: inset 0 0 0 0em #555;
+        display: flex;
+        padding: .7em;
+        width: 15em;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    /*p {*/
+        .ion-chevron-down {
+            font-size: 21px;
+            padding-left: 14px;
+        }
+
+        .ion-paperclip {
+            font-size: 24px;
+            padding-right: 14px;
+        }
+    /*}*/
+
+
 /* contact
 ==================================================*/
 
@@ -1219,7 +1239,7 @@ fieldset {
     width: 100%;
     height: 240px;
     }
-    .resume-event-thumbnail {
+    .CTA-event-thumbnail {
         width: 100%;
     }
 
@@ -1382,7 +1402,7 @@ a.portfolio_item {
     color: rgba(0, 0, 0, 0.6);
     font-size: 15px;
     font-weight: 500;
-    letter-spacing: .05em;
+    letter-spacing: .02em;
     line-height: 23px;
     margin: 8px 0;
     width: 100%;
