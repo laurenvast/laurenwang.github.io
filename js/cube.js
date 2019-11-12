@@ -37,8 +37,10 @@ var cube = function(p){
     y6 = y + my;
     // fill(255, 0);
 
-    p.stroke(212, 72, 37);
-    p.strokeWeight(l/25);
+    // p.stroke(212, 72, 37);
+    // p.stroke(250, 216, 207);
+    p.stroke(246, 214, 206);
+    p.strokeWeight(l/20);
 
     p.line(x1, y2, x4, y3);
     p.line(x4, y3, x4, y5);

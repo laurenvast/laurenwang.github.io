@@ -4,6 +4,10 @@
 * website : www.ahmedessa.net
 */
 
+$main-color: #d04725;
+$main-light: #fbf5f4;
+$main-shadow: rgba($main-color, .3);
+
 
 /* Table of Content
 ==================================================
@@ -26,8 +30,8 @@
 
 h1 {
     font-family: 'Scope One', serif;
-    font-size: 97px;
-    /*line-height: 70px;*/
+    font-size: 90px;
+    line-height: 1.3;
    letter-spacing: 0;
    margin-bottom: 29px;
 
@@ -37,7 +41,7 @@ h4 {
     font-family: 'Lato', sans-serif;
     font-size: 23px;
     line-height: 35px;
-        color: #d44825;
+        color: $main-color;
 
 }
 
@@ -46,7 +50,7 @@ h5 {
     text-transform: capitalize;
     letter-spacing: .05em;
     position: relative;
-    color: #d44825;
+    color: $main-color;
     margin-left: 40px;
     font-weight: 700;
     font-size: 1.3em;
@@ -60,7 +64,7 @@ h5:before {
     content: "";
     display: block;
     height: 3px;
-    background: #d44825;
+    background: $main-color;
     top: .55em;
 }
 
@@ -74,8 +78,8 @@ h2 {
 
 h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 29px;
-    line-height: 46px;
+    font-size: 26px;
+    line-height: 42px;
 }
 .size-h3 {
     font-size: 29px;
@@ -91,7 +95,7 @@ h6 {
     letter-spacing: .1em;
     font-size: 14px;
     /*opacity: .7;*/
-    color: #d44825;
+    color: $main-color;
     margin: 0;
     /*font-weight: 700;*/
 }
@@ -106,7 +110,7 @@ label {
 }
 
 strong {
-    color: #d44825;
+    color: $main-color;
 }
 /* General
 ==================================================*/
@@ -117,7 +121,10 @@ body {
     line-height: 31px;
     color: rgba(0, 0, 0, .8);
     letter-spacing: .01em;
+    /*background: #f8f4f3;*/
 }
+
+
 
 .size-50 {
     font-size: 50px;
@@ -186,11 +193,11 @@ body {
 }
 
 #cube {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: -60px;
   left: 0;
   z-index: -1;
-  opacity: .3;
+  /*opacity: .25;*/
 }
 
 .cubelogo {
@@ -240,7 +247,7 @@ body {
     width: 100%;
     -webkit-animation: wink 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
     animation: wink 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
-    border: 5px solid #d44825;
+    border: 5px solid $main-color;
 }
 
 .preloader>.icon {
@@ -414,7 +421,7 @@ nav li a {
 
 .scroll-nav {
     background: #fff;
-    border-bottom: 1px solid #f3f3f3;
+    border-bottom: 1px solid rgba($main-color, .1);
 }
 
 .scroll-nav ul {
@@ -433,12 +440,12 @@ a:focus {
 }
 
 a:hover {
-    color: #d44825;
+    color: $main-color;
     text-decoration: none;
 }
 
 a.active {
-    color: #d44825;
+    color: $main-color;
     border-bottom: solid;
 
 }
@@ -504,7 +511,8 @@ a.active {
 #home {
     /*background: url(../img/home-bg-2.jpg);*/
     background-size: cover;
-    height: 100vh;
+    height: 75vh;
+    /*background-color: #f8f4f3;*/
 }
 
 .table-cell {
@@ -514,7 +522,7 @@ a.active {
 
 .disply-table {
     display: table;
-    height: 100vh;
+    height: 75vh;
 }
 
 
@@ -532,7 +540,7 @@ a.active {
 
 .about-border {
     position: absolute;
-    border: 10px solid #d44825;
+    border: 10px solid $main-color;
     width: 300px;
     height: 300px;
     top: 40px;
@@ -573,7 +581,7 @@ a.active {
     font-family: 'Lato', sans-serif;
     text-transform: capitalize;
     letter-spacing: 2px;
-    color: #d44825;
+    color: $main-color;
     font-size: 16px;
     font-weight: bold
 }
@@ -613,11 +621,11 @@ a.active {
 .timeline-event:hover .timeline-event-icon {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    background-color: #d44825;
+    background-color: $main-color;
 }
 
 .timeline-event:hover .timeline-event-thumbnail {
-    box-shadow: inset 40em 0 0 0 #d44825;
+    box-shadow: inset 40em 0 0 0 $main-color;
 }
 
 .timeline-event-copy {
@@ -652,7 +660,7 @@ a.active {
     transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: #d44825;
+    background-color: $main-color;
     outline: 10px solid #f3f3f3;
     display: block;
     margin: 0.5em 0.5em 0.5em -0.5em;
@@ -674,7 +682,7 @@ a.active {
     font-size: 12px;
     font-weight: bold;
     background-color: #555;
-    box-shadow: inset 0 0 0 0em #d44825;
+    box-shadow: inset 0 0 0 0em $main-color;
     display: inline-block;
     margin-bottom: 1.2em;
     padding: 0.25em 1em 0.2em 1em;
@@ -688,11 +696,11 @@ a.active {
 .resume-event:hover .resume-event-icon {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    background-color: #d44825;
+    background-color: $main-color;
 }
 
 .resume-event:hover .resume-event-thumbnail {
-    box-shadow: inset 80em 0 0 0 #d44825;
+    box-shadow: inset 80em 0 0 0 $main-color;
 }
 
 .resume-event-copy {
@@ -710,7 +718,7 @@ a.active {
     transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
-    background-color: #d44825;
+    background-color: $main-color;
     outline: 10px solid #f3f3f3;
     display: block;
     margin: 0.5em 0.5em 0.5em -0.5em;
@@ -732,7 +740,7 @@ a.active {
     font-size: 16px;
     letter-spacing: 2px;
     font-weight: bold;
-    background-color: #d44825;
+    background-color: $main-color;
     box-shadow: inset 0 0 0 0em #555;
     /*display: inline-block;*/
     display: flex;
@@ -752,7 +760,7 @@ a.active {
 #projects {
     /*padding: 100px 0;*/
     padding-top: 50px;
-    background: #f6efee;
+    background: $main-light;
 }
 
 .portfolio .categories-grid span {
@@ -779,7 +787,7 @@ a.active {
 .portfolio .categories-grid .categories ul li a:hover,
 .portfolio .categories-grid .categories ul li a:focus {
     text-decoration: none;
-    color: #d44825;
+    color: $main-color;
     transition: none;
 }
 
@@ -787,9 +795,9 @@ a.active {
     transition: all .2s ease-in-out .2s;
 }
 .portfolio .categories-grid .categories ul li a.active {
-    /*background-color: #d44825;*/
+    /*background-color: $main-color;*/
     /*padding: 0px 20px;*/
-    color: #d44825;
+    color: $main-color;
     border-bottom: solid;
     /*text-decoration: none;*/
 }
@@ -842,7 +850,7 @@ a.active {
 .portfolio_item .portfolio_item_hover .item_info h3 {
     font-style: normal;
     display: inline-block;
-    /*background-color: #d44825;*/
+    /*background-color: $main-color;*/
     padding: 5px 20px;
     color: #fff;
     margin-top: 10px;
@@ -886,12 +894,18 @@ a.active {
     /*display: inline-block;*/
     margin: auto;
     text-align: center;
+    padding: 0;
+    width: 100%;
+
+/*    li {
+        width: 50%;
+    }*/
 }
 
 
 .portfolio-inner {
     padding-bottom: 0 !important;
-    padding-top: 55px;
+    /*padding-top: 55px;*/
 }
 
 .modal-content {
@@ -933,7 +947,7 @@ a.active {
 }
 
 #moreproject {
-    background: #f6efee;
+    background: $main-light;
 }
 
 .videos {
@@ -1019,11 +1033,11 @@ fieldset {
 }
 
 #success p {
-    color: #d44825;
+    color: $main-color;
     font-size: 15px;
     text-align: center;
     padding: 10px;
-    border: 2px solid #d44825;
+    border: 2px solid $main-color;
     margin-top: 10px;
 }
 
@@ -1037,7 +1051,7 @@ fieldset {
 }
 
 #submit {
-    background-color: #d44825;
+    background-color: $main-color;
     color: #fff;
     padding: 10px 40px;
     border-radius: 0;
@@ -1092,11 +1106,11 @@ fieldset {
 }
 
 .social li a:hover {
-    color: #d44825;
+    color: $main-color;
     box-shadow: inset 48px 0 0 0em white;
 
-    /*background: #d44825;*/
-    /*border: #d44825 3px solid;*/
+    /*background: $main-color;*/
+    /*border: $main-color 3px solid;*/
 }
 
 .social2 {
@@ -1120,7 +1134,7 @@ fieldset {
 }
 
 .social2 li a:hover {
-    color: #d44825;
+    color: $main-color;
 }
 
 
@@ -1142,6 +1156,13 @@ fieldset {
 
 @media (max-width: 760px) {
     
+    #home {
+        height: 100vh;
+    }
+
+    .disply-table {
+        height: 100vh;
+    }
     h1 {
         font-size: 76px;
         /*line-height: 70px;*/
@@ -1152,7 +1173,7 @@ fieldset {
     }
     .wide > a.portfolio_item {
         flex-wrap: wrap;
-        /*background: rgba(#d44825, .02);*/
+        /*background: rgba($main-color, .02);*/
 
     }
 }
@@ -1160,7 +1181,7 @@ fieldset {
 @media (max-width: 500px) {
     h1 {
         font-size: 47px;
-        line-height: 70px;
+        /*line-height: 70px;*/
     }
     h3 {
         font-size: 23px;
@@ -1220,7 +1241,7 @@ fieldset {
     footer {
         padding: 30px 0;
         text-align: center;
-        background: #d44825;
+        background: $main-color;
     }
 
     .copyright {
@@ -1243,7 +1264,7 @@ fieldset {
 
     .postbtn {
         position: relative;
-        background-color: #d44825;
+        background-color: $main-color;
         color: #fff;
         padding: 10px 40px;
         border-radius: 0;
@@ -1259,8 +1280,8 @@ fieldset {
 
     a.postbtn:hover {
         background-color: #fff;
-        color: #d44825;
-        border-color: #d44825;
+        color: $main-color;
+        border-color: $main-color;
     }
 
     .imgbtn {
@@ -1322,6 +1343,7 @@ flex-grow: 0;
 a.portfolio_item {
     border: none;
     background: white;
+        /*box-shadow: $main-shadow 0 2px 0;*/
 }
 
 .portfolio_item {
@@ -1333,11 +1355,11 @@ a.portfolio_item {
     /*background: rgba(212, 72, 37, .05);*/
     /*border-radius: 6px;*/
     /*border-left: solid rgba(212, 72, 37, 1) 5px;*/
-    transform: translate(8px, 0);
-    box-shadow: rgba(212, 72, 37, .3)  -8px 0 0;
+    transform: translate(6px, 0);
+    box-shadow: $main-shadow -6px 0 0;
     /*transform: scale(1.07);*/
     /*pointer-events: ;*/
-    transition: all 150ms ease-in-out;
+    transition: all 150ms ease;
 }
 .portfolio_item .item_info {
     line-height: 1.3;
@@ -1346,7 +1368,7 @@ a.portfolio_item {
 
 .portfolio_item .item_info span {
     display: block;
-    color: #d44825;
+    color: $main-color;
     font-size: 18px;
     font-weight: bold;
     padding-bottom: 5px;
@@ -1368,7 +1390,7 @@ a.portfolio_item {
 .portfolio_item > .clearfix {
     padding: 10px 15px;
     /*height: 6em;*/
-    /*border-top: #d44825 solid 3px;*/
+    /*border-top: $main-color solid 3px;*/
             flex-grow: 2;
        display: flex;
       flex-direction: column;
