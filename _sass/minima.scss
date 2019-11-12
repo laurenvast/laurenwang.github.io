@@ -193,11 +193,13 @@ body {
 }
 
 #cube {
-  position: absolute;
+  position: fixed;
   top: -60px;
   left: 0;
   z-index: -1;
   /*opacity: .25;*/
+  width: 100%;
+  overflow: hidden;
 }
 
 .cubelogo {
