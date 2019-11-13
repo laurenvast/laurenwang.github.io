@@ -29,8 +29,8 @@ background-attachment: fixed; background-position: center; -webkit-transition: b
 
 <div class="container">
   <div class="col-md-12" data-aos="fade-up">
-<h5>Demo Video</h5>
-<div class="h-20"></div>
+    <h5>Demo Video</h5>
+    <div class="h-20"></div>
 
     <div style="width:100%;height:auto;background-color:black;text-align:center;">
       <video style="height:100%;    width: 100%;" controls>
@@ -42,69 +42,87 @@ background-attachment: fixed; background-position: center; -webkit-transition: b
     </div>
 
 
+    <div class="col-md-12" data-aos="fade-up">
+
+      <h5>Audio Trigger Test</h5>
+      <div class="h-20"></div>
+      <div class="col-md-6" data-aos="fade-up">
+
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BQLqK2Tj4Am/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+        </blockquote><script async src="//www.instagram.com/embed.js"></script>
+      </div>
+      <div class="col-md-6" data-aos="fade-up">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/BNaA4v5jXIz/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+        </blockquote><script async src="//www.instagram.com/embed.js"></script>
+
+      </div>
+    </div>
+
   <div class="col-md-12" data-aos="fade-up">
 
-<h5>Prototype</h5>
-<div class="h-20"></div>
-<p>Click on the canvas</p>
+    <div class="h-50"></div>
+
+    <h5>Prototype</h5>
+    <div class="h-20"></div>
+    <p>Click on the canvas</p>
     <p class="codepen" data-height="500" data-theme-id="light" data-default-tab="js,result" data-user="laurenvast" data-slug-hash="GWvQvZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="click">
-  <span>See the Pen <a href="https://codepen.io/laurenvast/pen/GWvQvZ">
-  click</a> by Lauren Wang (<a href="https://codepen.io/laurenvast">@laurenvast</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-</div>
-
+      <span>See the Pen <a href="https://codepen.io/laurenvast/pen/GWvQvZ">
+      click</a> by Lauren Wang (<a href="https://codepen.io/laurenvast">@laurenvast</a>)
+      on <a href="https://codepen.io">CodePen</a>.</span>
+    </p>
+    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   </div>
-  <!-- </div>  -->
 
-  <script>
-    var imgadr= ['img/portfolio/knock1.jpg','img/portfolio/knock3.jpg','img/portfolio/knock4.jpg','img/portfolio/knock5.jpg','img/portfolio/knock7.jpg','img/portfolio/knock2.jpg','img/portfolio/knock6.jpg'];
+</div>
+<!-- </div>  -->
 
-    var cnt= 0;
-    var timer;
+<script>
+  var imgadr= ['img/portfolio/knock1.jpg','img/portfolio/knock3.jpg','img/portfolio/knock4.jpg','img/portfolio/knock5.jpg','img/portfolio/knock7.jpg','img/portfolio/knock2.jpg','img/portfolio/knock6.jpg'];
+
+  var cnt= 0;
+  var timer;
+
+  sliderTimer();
+  function sliderTimer(){
+    timer= setInterval(slider, 2500);
+  }
+
+  function slider(){
+    cnt++;
+    if(cnt == imgadr.length)
+      cnt= 0;
+
+    var slider= document.getElementById('slider');
+    slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
+  }
+
+  function next(){
+    clearInterval(timer);
+
+    cnt++; 
+    if(cnt == imgadr.length)
+      cnt= 0;
+
+    var slider= document.getElementById('slider');
+    slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
 
     sliderTimer();
-    function sliderTimer(){
-      timer= setInterval(slider, 2500);
-    }
+  }
 
-    function slider(){
-      cnt++;
-      if(cnt == imgadr.length)
-        cnt= 0;
+  function prev() {
+    console.log('prev');
+    clearInterval(timer);
 
-      var slider= document.getElementById('slider');
-      slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
-    }
+    cnt--;
+    if(cnt == -1)
+      cnt= imgadr.length-1;
 
-    function next(){
-      clearInterval(timer);
+    var slider= document.getElementById('slider');
+    slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
+    document.getElementById('sliderHeader').innerHTML= headArray[cnt];
+    document.getElementById('sliderPara').innerHTML= paraArray[cnt];
 
-      cnt++; 
-      if(cnt == imgadr.length)
-        cnt= 0;
+    sliderTimer();
+  }
 
-      var slider= document.getElementById('slider');
-      slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
-
-      sliderTimer();
-    }
-
-    function prev() {
-      console.log('prev');
-      clearInterval(timer);
-
-      cnt--;
-      if(cnt == -1)
-        cnt= imgadr.length-1;
-
-      var slider= document.getElementById('slider');
-      slider.style.backgroundImage= "url(\'"+imgadr[cnt]+"\')";
-      document.getElementById('sliderHeader').innerHTML= headArray[cnt];
-      document.getElementById('sliderPara').innerHTML= paraArray[cnt];
-
-      sliderTimer();
-    }
-
-  </script>
+</script>
