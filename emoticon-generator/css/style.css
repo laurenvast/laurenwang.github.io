@@ -39,6 +39,11 @@ body:hover #prompt {
   font-weight: 900;
 }
 
+#prompt:hover {
+    text-shadow: #b64e85 .1em .1em 0;
+
+  }
+
 .emoticon {
   display: flex;
   font-size: 4em;
