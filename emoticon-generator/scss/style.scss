@@ -20,6 +20,12 @@ body {
 	font-weight: 700;
 	
 	background: linear-gradient(135deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+	&:hover {
+		#prompt {
+					font-weight: 900;
+		}
+	}
 }
 
 #prompt {
@@ -36,6 +42,10 @@ body {
 		line-height: 3;
 			font-size: .7em;
 
+	}
+
+		&:hover {
+				text-shadow: #b64e85 .1em .1em 0;
 	}
 
 }
