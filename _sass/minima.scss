@@ -34,7 +34,9 @@ h1 {
     line-height: 1.3;
    letter-spacing: 0;
    margin-bottom: 29px;
-
+   span {
+        font-size: 72px;
+   }
 }
 
 h4 {
@@ -1215,6 +1217,9 @@ fieldset {
     h1 {
         font-size: 76px;
         /*line-height: 70px;*/
+         span {
+        font-size: 42px;
+   }
     }
     .timeline-event-copy {
         width: 90%;
