@@ -38,8 +38,8 @@ var cube = function(p){
     // fill(255, 0);
 
     // p.stroke(212, 72, 37);
-    // p.stroke(250, 216, 207);
-    p.stroke(246, 214, 206);
+    p.stroke(248, 225, 222);
+    // p.stroke(246, 214, 206);
     p.strokeWeight(l/20);
 
     p.line(x1, y2, x4, y3);

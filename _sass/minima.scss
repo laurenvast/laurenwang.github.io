@@ -1,12 +1,11 @@
-/*
-* Resume template
-* Created by : Ahmed Essa
-* website : www.ahmedessa.net
-*/
 
-$main-color: #d04725;
-$main-light: #fbf5f4;
+$main-color: hsl(7, 72%, 51%);
+$main-light: hsl(7, 62%, 97%);
+$main-dark: hsl(7, 62%, 32%);
+/*$main-color: hsl(7, 72%, 51%);*/
+/*$main-light: hsl(7, 62%, 97%);*/
 $main-shadow: rgba($main-color, .3);
+$main-bg-light: rgba($main-color, .1);
 
 
 /* Table of Content
@@ -1451,8 +1450,8 @@ a.portfolio_item {
 .NDA {
     /*font-size: 1.19em;*/
     padding: 1.5em 2.2em;
-    color: #794436;
-    background: rgba(212, 72, 37,.1);
+    color: $main-dark;
+    background: $main-bg-light;
 }
 
 div.content-row + div.content-row {
