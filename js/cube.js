@@ -55,7 +55,7 @@ var cube = function(p){
     p.line(x4, y5, x3, y4);
     p.line(x3, y2, x4, y3);
     
-    a += d/2;
+    a += d;
 
     if (a >= (p.height + p.width) / 2/2) {
       d = -d;
