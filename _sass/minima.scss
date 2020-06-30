@@ -1290,7 +1290,7 @@ fieldset {
     footer {
         padding: 30px 0;
         text-align: center;
-        background: $main-color;
+        background: rgba($main-color, .75);
     }
 
     .copyright {
