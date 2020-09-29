@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Lauren is an experienced Product Designer with both design and technical background, 
   specialized in interaction design, UI design, and code-based prototyping.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://lauren.wang" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://lauren.wang" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: 
 github_username:  laurenvast
 instagram_username: laurenvast
