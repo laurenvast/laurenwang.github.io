@@ -1,7 +1,7 @@
 
-$main-color: hsl(7, 52%, 51%);
-$main-light: hsl(7, 62%, 97%);
-$main-dark: hsl(7, 62%, 32%);
+$main-color: hsl(357deg 50% 53%);
+$main-light: hsl(357deg, 62%, 97%);
+$main-dark: hsl(357deg, 62%, 32%);
 /*$main-color: hsl(7, 72%, 51%);*/
 /*$main-light: hsl(7, 62%, 97%);*/
 $main-shadow: rgba($main-color, .3);
@@ -997,59 +997,6 @@ a.active {
         }
     /*}*/
 
-
-/* contact
-==================================================*/
-
-#contact {
-    padding: 100px 0;
-    background: #f3f3f3;
-}
-
-#contact-form input,
-#contact-form textarea {
-    height: 50px;
-    margin-bottom: 20px;
-    border-radius: 0;
-}
-
-#contact-form label {
-    display: block;
-    margin-bottom: .2em;
-    font-size: 13px;
-    line-height: 13px;
-    font-size: 1.3rem;
-    line-height: 1.3rem;
-    color: #000;
-}
-
-#contact-form label.error {
-    margin-top: 10px;
-    margin-bottom: 1em;
-    font-size: 12px;
-    line-height: 12px;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-    color: #D33E43;
-    margin-left: 10px
-}
-
-#contact-form input[type="text"].error,
-#contact-form input[type="password"].error,
-#contact-form input[type="date"].error,
-#contact-form input[type="datetime"].error,
-#contact-form input[type="datetime-local"].error,
-#contact-form input[type="month"].error,
-#contact-form input[type="week"].error,
-#contact-form input[type="email"].error,
-#contact-form input[type="number"].error,
-#contact-form input[type="search"].error,
-#contact-form input[type="tel"].error,
-#contact-form input[type="time"].error,
-#contact-form input[type="url"].error,
-#contact-form textarea.error {
-    border-color: #D33E43
-}
 
 textarea {
     resize: none;

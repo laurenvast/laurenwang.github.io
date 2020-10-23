@@ -21,7 +21,7 @@ var logo = function(p){
   p.draw = function() {
 
     // console.log(p.width);
-    p.background(195, 80, 65);
+    p.background(195,75,81);
 
     var x = p.width / 2;
     var y = p.height / 2;
