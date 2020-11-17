@@ -13,11 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Lauren Wang //Product Designer & Technologist
+title: Lauren Wang
 email: heylaurenwang@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Lauren is an experienced Product Designer with both design and technical background, 
-  specialized in interaction design, UI design, and code-based prototyping.
+  Product Designer and Creative Technologist specialized in interaction and user interface design, web animation, and code-based prototyping.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lauren.wang" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: 

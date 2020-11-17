@@ -1420,10 +1420,13 @@ a.portfolio_item {
 }
 
 .NDA {
-    /*font-size: 1.19em;*/
     padding: 1.5em 2.2em;
     color: $main-dark;
     background: $main-bg-light;
+    height: calc(11em + 350px);
+    .size-h3{
+        line-height: 1.5;
+    }
 }
 
 div.content-row + div.content-row {
