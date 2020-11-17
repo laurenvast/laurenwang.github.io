@@ -1,22 +1,23 @@
 					<!-- portfolio_filter -->
-					<div class="categories-grid wow fadeInLeft">
+				<!-- 	<div class="categories-grid wow fadeInLeft">
 						<nav class="categories">
 							<ul class="portfolio_filter">
-                                <li><a href="" class="active size-16" data-filter=".biz"><i class="ion-loop" onclick="ga('send', 'event', 'filter', 'click', 'biz')"></i> Product designer</a></li>
+                                <li><a href="" class="active" data-filter="*">All</a></li>
+                                <li><a href="" class="size-16" data-filter=".biz"><i class="ion-loop" onclick="ga('send', 'event', 'filter', 'click', 'biz')"></i> Product designer</a></li>
                                 <li><a href="" class="size-16" data-filter=".fun" onclick="ga('send', 'event', 'filter', 'click', 'exp')"><i class="ion-erlenmeyer-flask"></i> Creative technologist</a></li>
 
                             </ul>
                         </nav>
-					</div>
+					</div> -->
 				<!-- portfolio_filter -->
-    <div class="h-20"></div>
+    <div class="h-50"></div>
 
 				{%- if site.posts.size > 0 -%}
-                    <div class="no-padding portfolio_container clearfix">
+                    <div class="no-padding portfolio_container clearfix" data-aos="fade-up">
 
 					{%- for post in site.posts -%}
 							{%- if page.title == post.title  -%}
-							<div>{{post.title}}</div>
+							<!-- <div>{{post.title}}</div> -->
 							{%- else -%}
 								{%- include singlework.html -%}
 							{%- endif -%}

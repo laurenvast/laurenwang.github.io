@@ -118,35 +118,35 @@ $(document).ready(function () {
         disable: 'mobile'
     });
 
-    //  isotope
-    $('#projects').waitForImages(function () {
-        var $container = $('.portfolio_container');
-        $container.isotope({
-            filter: '.biz',
-        });
+    // //  isotope
+    // $('#projects').waitForImages(function () {
+    //     var $container = $('.portfolio_container');
+    //     $container.isotope({
+    //         filter: '*',
+    //     });
 
-        $('.portfolio_filter a').click(function () {
-            $('.portfolio_filter .active').removeClass('active');
-            $(this).addClass('active');
+    //     $('.portfolio_filter a').click(function () {
+    //         $('.portfolio_filter .active').removeClass('active');
+    //         $(this).addClass('active');
 
-            var selector = $(this).attr('data-filter');
-            $container.isotope({
-                filter: selector,
-                animationOptions: {
-                    duration: 500,
-                    animationEngine: "jquery"
-                }
-            });
-            return false;
-        });
+    //         var selector = $(this).attr('data-filter');
+    //         $container.isotope({
+    //             filter: selector,
+    //             animationOptions: {
+    //                 duration: 500,
+    //                 animationEngine: "jquery"
+    //             }
+    //         });
+    //         return false;
+    //     });
 
-    });
+    // });
 
     //  isotope
     $('#moreproject').waitForImages(function () {
         var $container = $('.portfolio_container');
         $container.isotope({
-            filter: '.biz',
+            filter: '*',
         });
 
         $('.portfolio_filter a').click(function () {
