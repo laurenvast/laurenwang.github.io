@@ -483,6 +483,8 @@ a.active {
     background-size: cover;
     width: 24px;
     height: 100%;
+        margin-right: 10px;
+display: inline-block;
 }
 
 .space{
@@ -492,6 +494,20 @@ a.active {
 .menu {
     display: flex;
     padding: 15px 5px;
+        align-items: center;
+
+
+    .logotext {
+        font-size: 14px;
+        opacity: 0;
+        transform: translate(0, 10px);
+        transition: all 250ms ease;
+    }
+}
+
+.postheader{
+            font-size: 14px;
+        transform: translate(0, 1px);
 }
 
 .menu > li {
