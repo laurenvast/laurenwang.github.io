@@ -1118,11 +1118,11 @@ fieldset {
 .social2 li a {
     /*border-radius: 50px;*/
 
-    width: 48px;
-    line-height: 48px;
-    color: $main-color;
-    font-size: 36px;
-    margin-right: 20px;
+    width: 36px;
+    line-height: 36px;
+    color: rgba(black, .6);
+    font-size: 24px;
+    margin-right: 10px;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
     display: block;
@@ -1132,7 +1132,7 @@ fieldset {
 
 .social2 li a:hover {
     color: white;
-    box-shadow: inset 48px 0 0 0em $main-color;
+    box-shadow: inset 36px 0 0 0em $main-color;
 
     /*background: $main-color;*/
     /*border: $main-color 3px solid;*/
