@@ -1433,9 +1433,11 @@ div.content-row + div.content-row {
 
 .resume {
     color: rgba(black, .8);
+font-weight: 600;
+
 
     &:hover{
-
+        text-decoration: underline; 
         color: $main-color;
     }
 }
