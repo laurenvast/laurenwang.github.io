@@ -71,14 +71,15 @@ h2 {
     font-family: 'Scope One', serif;
     font-size: 47px;
     line-height: 72px;
-       letter-spacing: 0;
+    letter-spacing: 0;
+    margin-top: 0;
 
 }
 
 h3 {
     font-family: 'Lato', sans-serif;
-    font-size: 26px;
-    line-height: 42px;
+    font-size: 24px;
+    line-height: 40px;
 }
 .size-h3 {
     font-size: 29px;
@@ -116,11 +117,20 @@ strong {
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    line-height: 31px;
+    font-size: 19px;
+    line-height: 32px;
     color: rgba(0, 0, 0, .8);
-    letter-spacing: .01em;
+    letter-spacing: .02em;
     /*background: #f8f4f3;*/
+}
+
+
+code {
+    color: $main-color;
+    background-color: $main-bg-light;
+    white-space: nowrap;
+    margin-right: .5em;
+
 }
 
 
@@ -185,7 +195,7 @@ body {
 
 .description {
     /*line-height: 39px;*/
-    max-width: 30em;
+    max-width: 31em;
     /*opacity: .8;*/
 /* margin: 0;*/
     /*letter-spacing: 1px;*/
@@ -1203,11 +1213,11 @@ fieldset {
 
 @media (max-width: 500px) {
     h1 {
-        font-size: 47px;
+        font-size: 48px;
         /*line-height: 70px;*/
     }
     h3 {
-        font-size: 23px;
+        font-size: 21px;
         line-height: 35px;
     }
     h2 {
@@ -1401,7 +1411,7 @@ a.portfolio_item {
 .portfolio_item .item_info h3 {
     font-style: normal;
     color: rgba(0, 0, 0, 0.6);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: .02em;
     line-height: 23px;
