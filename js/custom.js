@@ -122,7 +122,7 @@ $(document).ready(function () {
     $('#projects').waitForImages(function () {
         var $container = $('.portfolio_container');
         $container.isotope({
-            filter: '.biz',
+            filter: '*',
         });
 
         $('.portfolio_filter a').click(function () {
@@ -146,7 +146,7 @@ $(document).ready(function () {
     $('#moreproject').waitForImages(function () {
         var $container = $('.portfolio_container');
         $container.isotope({
-            filter: '.biz',
+            filter: '*',
         });
 
         $('.portfolio_filter a').click(function () {

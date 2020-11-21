@@ -25,8 +25,12 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > 80) {
             $(".navbar-fixed-top").addClass("scroll-nav");
+          $('.logotext').css( "transform", "translate(0, 1px)" );
+          $('.logotext').css( "opacity", "1" );
         } else {
             $(".navbar-fixed-top").removeClass("scroll-nav");
+                        $('.logotext').css( "opacity", "0" );
+          $('.logotext').css( "transform", "translate(0, 10px)" );
         }
     });
 
@@ -74,11 +78,14 @@ function hasScrolled() {
         // Scroll Down
         $('header').removeClass('nav-down').addClass('nav-up');
         $('header.nav-up').css( "top", navbarHeight*-1 );
+
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {
             $('header').removeClass('nav-up').addClass('nav-down');
              $('header').css( "top", "" );
+ 
+
         }
     }
     

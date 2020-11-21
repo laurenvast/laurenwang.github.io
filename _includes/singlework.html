@@ -1,7 +1,7 @@
 
 
  <!-- single work -->
-<div class=" {{ post.cols }} {{ post.categories }}">
+<div class=" {{ post.cols }} {{ post.categorie2 }} {{ post.categorie3 }} {{ post.categorie4 }} {{ post.categorie5 }}">
     <a href="{{ post.url | relative_url }}" class="portfolio_item"> <img src="{{ post.thumb }}" alt="image" class="img-responsive"/>
             <div class="portfolio-border clearfix">
                 <div class="item_info">
@@ -15,8 +15,9 @@
 
                 	<h2 class="size-h3">{{ post.title | escape }}</h2>
                 	<h3>{{ post.excerpt }}</h3>
+                    
                 </div>
-                <h6>Read More <i class="ion-ios-arrow-right"></i></h6>
+                <!-- <h6>Read More <i class="ion-ios-arrow-right"></i></h6> -->
             </div>
     </a>
 </div>
