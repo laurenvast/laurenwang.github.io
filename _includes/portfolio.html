@@ -3,17 +3,16 @@
 						<nav class="categories">
 							<ul class="portfolio_filter">
                                 <li><a href="" class="active" data-filter="*" onclick="ga('send', 'event', 'filter', 'click', 'all')">All</a></li>
-                                <!-- <li><a href="" class="size-16" data-filter=".biz"><i class="ion-loop" onclick="ga('send', 'event', 'filter', 'click', 'biz')"></i> Product designer</a></li>
-                                <li><a href="" class="size-16" data-filter=".fun" onclick="ga('send', 'event', 'filter', 'click', 'exp')"><i class="ion-erlenmeyer-flask"></i> Creative technologist</a></li> -->
 								<li><a href="" data-filter=".love" onclick="ga('send', 'event', 'filter', 'click', 'love')">Most proud ❤︎</a></li>
-
-                                <li><a href="" data-filter=".interaction" onclick="ga('send', 'event', 'filter', 'click', 'interaction')">Interaction/UI</a></li>
-
+ 								<li><a href="" data-filter=".interaction" onclick="ga('send', 'event', 'filter', 'click', 'interaction')">Interaction/UI</a></li>
                                 <li><a href="" data-filter=".animation" onclick="ga('send', 'event', 'filter', 'click', 'animation')">Animation</a></li>
-
                                 <li><a href="" data-filter=".fe" onclick="ga('send', 'event', 'filter', 'click', 'fe')">front-end</a></li>
-
                                 <li><a href="" data-filter=".physical" onclick="ga('send', 'event', 'filter', 'click', 'physical')">Physical</a></li>
+
+<!-- 
+
+                                <li><a href="" class="size-16 active" data-filter=".product" onclick="ga('send', 'event', 'filter', 'click', 'product')"><i class="ion-loop"></i> Product designer</a></li>
+								<li><a href="" class="size-16" data-filter=".creative" onclick="ga('send', 'event', 'filter', 'click', 'exp')"><i class="ion-erlenmeyer-flask"></i> Creative technologist</a></li> -->
                             </ul>
                         </nav>
 					</div>
@@ -25,24 +24,11 @@
 
 					{%- for post in site.posts -%}
 							{%- if page.title == post.title  -%}
-							<!-- <div>{{post.title}}</div> -->
+
 							{%- else -%}
 								{%- include singlework.html -%}
 							{%- endif -%}
 
-
-					<!-- <li>
-						{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-						<span class="post-meta">{{ post.date | date: date_format }}</span>
-						<h3>
-							<a class="post-link" href="{{ post.url | relative_url }}">
-								{{ post.title | escape }}
-							</a>
-						</h3>
-						{%- if site.show_excerpts -%}
-						{{ post.excerpt }}
-						{%- endif -%}
-					</li> -->
 					{%- endfor -%}
 
 
@@ -50,7 +36,7 @@
 
 {%- if page.title == post.title  -%}
 <div class="col-md-4 col-sm-6 biz">
-	<div class="NDA"><h2 class="size-h3">Product design case studies from recent 3 years are available upon request.</h2></div>
+	<div class="NDA"><h2 class="size-h3">More case studies on product design from recent 3 years are available upon request.</h2></div>
 </div>
 {%- endif -%}
 

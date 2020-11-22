@@ -2,20 +2,34 @@
 layout: postdefalt
 ---
 <div class="clearfix"></div>
-<div class="section modal-content" class="post">
+<div class="section modal-content post">
+  
+<div style="background-color: {{ page.splashcolor }}; background: linear-gradient(180deg, {{ page.splashcolor }} 60%, white 100%);
+">
+
   <div class="container">
     <div class="portfolio-padding">
       <div class="col-md-8 col-md-offset-2" data-aos="fade-up">
         {%- assign date_format = site.minima.date_format | default: "%Y" -%}
         <label>{{ page.client }}  ·  {{ page.date | date: date_format }}</label>
         <h2>{{ page.title | escape }}</h2>
+        <code>{{ page.role1 }}</code> <code>{{ page.role2 }}</code> <code>{{ page.role3 }}</code> <code>{{ page.role4 }}</code>
+
         <div class="h-20"></div>
-        <p>{{ page.excerpt | escape }}</p>
-        <div class="h-50"></div>
+        <p>{{ page.begining | escape }}</p>
+        <div class="h-20"></div>
       </div>
     </div>
   </div>
 
+        {%- if page.splashimg -%}
+
+  <div class="splash" style="background-color: transparent; background-image: url({{ page.splashimg }});"></div>
+        <div class="h-20"></div>
+                {%- endif -%}
+
+</div>
+        <div class="h-50"></div>
 <!--   <ul>
     {% for section in page.sections %}
     <li><a href="#section{{ page.section }}">{{ section | textilize }}</a></li>

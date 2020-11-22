@@ -1,11 +1,14 @@
 ---
-layout: post
+layout: post_long
 ---
 
 <div id="encrypted_content" >
-  <div id="error" class="center">
-        <p>Nice try, but no 🤷🏻‍♀️</p>
-    </div>
+        <div class="h-50"></div>
+
+  <p class="center">Enter the password to view the full page.</p>
+        <div class="h-20"></div>
+    <div class="inputgroup">
+
     <form id="encrypt_form" action="#" method="post">
     <input id="encrypt_password"
            type="password"
@@ -15,7 +18,10 @@ layout: post
 
     <button id="submit" type="submit" name="Unlock">Unlock <i class="ion-chevron-right"></i></button>
   </form>
-  
+  <div id="error" class="center">
+        <p>Nice try, but no 🤷🏻‍♀️</p>
+    </div>
+    </div>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.js"></script>
   <script>
     document.getElementById('encrypt_form').addEventListener('submit', function(e) {
@@ -41,3 +47,7 @@ layout: post
     });
   </script>
 </div>
+        <!-- <div class="h-20"></div> -->
+<!-- <p class="center">Request password at <code>heylaurenwang@gmail.com</code></p> -->
+
+
