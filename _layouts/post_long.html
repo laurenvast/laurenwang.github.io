@@ -13,20 +13,28 @@ layout: postdefalt
         {%- assign date_format = site.minima.date_format | default: "%Y" -%}
         <label>{{ page.client }}  ·  {{ page.date | date: date_format }}</label>
         <h2>{{ page.title | escape }}</h2>
+        
+        {%- if page.role1 -%}
         <code>{{ page.role1 }}</code> <code>{{ page.role2 }}</code> <code>{{ page.role3 }}</code> <code>{{ page.role4 }}</code>
+        {%- endif -%}
 
         <div class="h-20"></div>
+
+        {%- if page.begining -%}
         <p>{{ page.begining | escape }}</p>
+         {%- else -%}
+        <p>{{ page.excerpt | escape }}</p>
+        {%- endif -%}
+
         <div class="h-20"></div>
       </div>
     </div>
   </div>
 
         {%- if page.splashimg -%}
-
-  <div class="splash" style="background-color: transparent; background-image: url({{ page.splashimg }});"></div>
+        <div class="splash" style="background-color: transparent; background-image: url({{ page.splashimg }});"></div>
         <div class="h-20"></div>
-                {%- endif -%}
+        {%- endif -%}
 
 </div>
         <div class="h-50"></div>
