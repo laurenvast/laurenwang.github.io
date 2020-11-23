@@ -34,8 +34,10 @@ layout: post_long
           decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
       if (decryptedHMAC !== encryptedHMAC) {
+        {% if site.google_analytics and jekyll.environment == 'production' %}
         ga('send', 'event', 'project', 'submit_password', 'failed');
-        document.getElementById('error').style.visibility = ("visible");
+        {% endif %}
+         document.getElementById('error').style.visibility = ("visible");
         document.getElementById('error').style.animation = ("appear 300ms .2s forwards");
         document.getElementById('encrypt_form').style.animation=('shaking 1s');
         document.getElementById('encrypt_password').value = "";
@@ -43,7 +45,10 @@ layout: post_long
         return;
       }
 
+      {% if site.google_analytics and jekyll.environment == 'production' %}
       ga('send', 'event', 'project', 'submit_password', 'success');
+      {% endif %}
+      
       var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
       document.getElementById('encrypted_content').innerHTML = plainHTML;
     });
