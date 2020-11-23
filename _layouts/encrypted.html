@@ -16,7 +16,7 @@ layout: post_long
            placeholder="Enter password"
            autofocus />
 
-    <button id="submit" type="submit" name="Unlock" onclick="ga('send', 'event', 'project', 'click', 'unlock')">Unlock <i class="ion-chevron-right"></i></button>
+    <button id="submit" type="submit" name="Unlock">Unlock <i class="ion-chevron-right"></i></button>
   </form>
   <div id="error" class="center">
         <p>Nice try, but no 🤷🏻‍♀️</p>
@@ -34,6 +34,7 @@ layout: post_long
           decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
       if (decryptedHMAC !== encryptedHMAC) {
+        ga('send', 'event', 'project', 'submit_password', 'failed');
         document.getElementById('error').style.visibility = ("visible");
         document.getElementById('error').style.animation = ("appear 300ms .2s forwards");
         document.getElementById('encrypt_form').style.animation=('shaking 1s');
@@ -42,6 +43,7 @@ layout: post_long
         return;
       }
 
+      ga('send', 'event', 'project', 'submit_password', 'success');
       var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
       document.getElementById('encrypted_content').innerHTML = plainHTML;
     });
