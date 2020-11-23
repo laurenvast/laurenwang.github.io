@@ -1,5 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
+.DS_Store
+_protecteds
 node_modules
 .DS_Store
