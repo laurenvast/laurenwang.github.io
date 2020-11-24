@@ -135,6 +135,7 @@ b {
 blockquote {
     border-color: $main-shadow;
     border: none;
+    margin: 0;
 
     font-family: 'Lato', sans-serif;
     font-size: 24px;
@@ -347,7 +348,7 @@ code {
     transform-origin: top left;
     transform: scale(.8);
      width: 125%;
-        height: 125%;
+ 
 
     iframe {
        /* width: 125%;
@@ -356,6 +357,11 @@ code {
 
     }
 }
+
+div.cp_embed_wrapper {
+            height: 125%;
+
+    }
 
 
 @media only screen and (min-width:760px) {
@@ -1322,13 +1328,12 @@ fieldset {
 
 
 .splash {
-    max-height: 260px; 
     height: 50vh; 
     width: 100%; 
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top middle;
+    background-position: top center;
 }
 
 

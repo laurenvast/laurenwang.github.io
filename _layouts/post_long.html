@@ -32,7 +32,7 @@ layout: postdefalt
   </div>
 
         {%- if page.splashimg -%}
-        <div class="splash" style="background-color: transparent; background-image: url({{ page.splashimg }});"></div>
+        <div class="splash" style=" max-height: {{ page.splashheight }}; background-color: transparent; background-image: url({{ page.splashimg }});"></div>
         <div class="h-20"></div>
         {%- endif -%}
 

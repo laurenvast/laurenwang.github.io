@@ -13,8 +13,7 @@ layout: post_long
     <input id="encrypt_password"
            type="password"
            name="password"
-           placeholder="Enter password"
-           autofocus />
+           placeholder="Enter password"/>
 
     <button id="submit" type="submit" name="Unlock">Unlock <i class="ion-chevron-right"></i></button>
   </form>
@@ -48,7 +47,7 @@ layout: post_long
       {% if site.google_analytics and jekyll.environment == 'production' %}
       ga('send', 'event', 'project', 'submit_password', 'success');
       {% endif %}
-      
+
       var plainHTML = CryptoJS.AES.decrypt(encryptedHTML, passphrase).toString(CryptoJS.enc.Utf8);
       document.getElementById('encrypted_content').innerHTML = plainHTML;
     });
