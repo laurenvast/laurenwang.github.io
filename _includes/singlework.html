@@ -4,9 +4,17 @@
 
 {%- if post.client != "Passion project"  -%}
       <div class=" col-md-4 col-sm-6 {{ post.categorie1 }}  {{ post.categorie2 }} {{ post.categorie3 }} {{ post.categorie4 }} {{ post.categorie5 }}">
-         <a href="{{ post.url | relative_url }}" class="portfolio_item" style="background: {{ post.cardcolor }} ">
+        {%- if post.status == "empty" -%}
+            <a class="portfolio_item" style="background: rgba(195, 75, 81, .07); pointer-events: none;
+">
+
+       {%- else -%}
+
+            <a href="{{ post.url | relative_url }}" class="portfolio_item" style="background: {{ post.cardcolor }};">
+        {%- endif -%}
+
             <div class="imgwrap"><img src="{{ post.thumb }}" alt="image" class="img-responsive" style="transform: scale(.9);" /></div>
-               <div class="portfolio-border clearfix" style="background: {{ post.cardcolor }} ">
+               <div class="portfolio-border clearfix">
 
 {%- else -%}
       <div class="col-md-4 col-sm-6">
@@ -23,10 +31,14 @@
                     <label>{{ post.client }} · {{ post.date | date: date_format }}</label>
                 {%- endif -%}
 
-                {%- if post.password -%}
+                {%- if post.status == "password" -%}
                     <h3 class="size-h3">{{ post.title | escape }}  <i class="ion-locked subtaltext" style="font-size: .75em;"></i></h3>
+               {%- elsif post.status == "empty" -%}
+                   <h3 class="size-h3">{{ post.title | escape }}<span> (not avalible online)</span></h3>
+
                {%- else -%}
                     <h3 class="size-h3">{{ post.title | escape }}</h3>
+
                 {%- endif -%}
 
                  {%- if post.client == "Passion project"  -%}
