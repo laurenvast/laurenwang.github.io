@@ -616,7 +616,7 @@ display: inline-block;
 
 /* home section
 ==================================================*/
-#blink {
+.blink {
   -webkit-animation: blink-animation 1s steps(2, start) infinite;
 }
 
@@ -878,9 +878,18 @@ display: inline-block;
 .portfolio_item {
     position: relative;
     overflow: hidden;
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
     margin-bottom: 30px;
+
+    &.passion{
+           display: block;
+ 
+    }
 }
+
+
 
 .portfolio_item .portfolio_item_hover {
     position: absolute;
@@ -1623,7 +1632,7 @@ a.portfolio_item {
 
 }
 
-.portfolio_item .item_info h3 {
+.portfolio_item .item_info .card-excerpt {
     font-style: normal;
     color: $text-color-light;
     font-size: 16px;
@@ -1636,13 +1645,13 @@ a.portfolio_item {
 
 
 .portfolio_item > .clearfix {
-    padding: 15px 20px;
+    padding: 1em 1.5em;
     /* height: 6em; */
      flex-grow: 2; 
     /* display: flex; */
     /*flex-direction: column;*/
     /* justify-content: space-between; */
-    height: 11em;
+    height: 10em;
 }
 
 .NDA {

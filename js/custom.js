@@ -119,7 +119,7 @@ $(document).ready(function () {
     });
 
     //  isotope
-    $('#projects').waitForImages(function () {
+    $('#projects_product').waitForImages(function () {
         var $container = $('.portfolio_container');
         $container.isotope({
             filter: '*',

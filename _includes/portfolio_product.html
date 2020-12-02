@@ -1,13 +1,32 @@
-
+				
     <div class="h-50"></div>
+
+					<!-- portfolio_filter -->
+					<div class="categories-grid wow fadeInLeft">
+						<nav class="categories">
+							<ul class="portfolio_filter">
+                                <li><a href="" class="active" data-filter="*" onclick="ga('send', 'event', 'filter', 'click', 'all')">All</a></li>
+								<!-- <li><a href="" data-filter=".love" onclick="ga('send', 'event', 'filter', 'click', 'love')">Most proud ❤︎</a></li> -->
+                                <li><a href="" data-filter=".product" onclick="ga('send', 'event', 'filter', 'click', 'product')">Product case study</a></li>
+								<li><a href="" data-filter=".interaction" onclick="ga('send', 'event', 'filter', 'click', 'interaction')">Interaction/UI</a></li>
+                                <!-- <li><a href="" data-filter=".animation" onclick="ga('send', 'event', 'filter', 'click', 'animation')">Motion</a></li> -->
+                                <li><a href="" data-filter=".fe" onclick="ga('send', 'event', 'filter', 'click', 'fe')">front-end code</a></li>
+<!-- 
+                                <li><a href="" class="size-16" data-filter=".product" onclick="ga('send', 'event', 'filter', 'click', 'product')"><i class="ion-loop"></i> Product designer</a></li>
+								<li><a href="" class="size-16" data-filter=".creative" onclick="ga('send', 'event', 'filter', 'click', 'exp')"><i class="ion-erlenmeyer-flask"></i> Creative technologist</a></li> -->
+
+                            </ul>
+                        </nav>
+					</div>
+				<!-- portfolio_filter -->
+    <div class="h-20"></div>
 
 				{%- if site.posts.size > 0 -%}
                     <div class="no-padding portfolio_container clearfix">
 
 					{%- for post in site.posts -%}
 							{%- if page.title == post.title  -%}
-
-							{%- elsif post.categorie1 == "product"  -%}
+							{%- elsif post.client != "Passion project"  -%}
 								{%- include singlework.html -%}
 							{%- endif -%}
 
