@@ -166,6 +166,35 @@ $(document).ready(function () {
 
     });
 
+
+//hover card
+
+
+var wrap = $(".portfolio_container");
+
+wrap.on("mousemove", function (e) {
+
+  var target = e.target;
+
+  if (target.classList.contains("portfolio_item")) {
+
+    var ax = -(e.clientX - target.getBoundingClientRect().left - target.offsetWidth / 2 ) / 10;
+
+    var ay = (e.clientY - target.getBoundingClientRect().top - target.offsetHeight / 2) / 20;
+
+    target.style.transform = "rotateY(" + ax + "deg) rotateX(" + ay + "deg)";
+    target.style.transition = "none";
+
+
+    $(this).children().children().on("mouseleave", function (e) {
+      target.style.transform = "rotateZ(0)";
+      target.style.transition = "transform 200ms ease";
+    });
+  }
+});
+
+
+
     //animatedModal
     $("#demo01,#demo02,#demo03,#demo04,#demo05,#demo06,#demo07,#demo08,#demo09").animatedModal();
 
