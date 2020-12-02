@@ -1,0 +1,20 @@
+
+    <div class="h-50"></div>
+
+				{%- if site.posts.size > 0 -%}
+                    <div class="no-padding portfolio_container clearfix">
+
+					{%- for post in site.posts -%}
+							{%- if page.title == post.title  -%}
+
+							{%- elsif post.categorie1 == "product"  -%}
+								{%- include singlework.html -%}
+							{%- endif -%}
+
+					{%- endfor -%}
+
+
+				</div>
+				{%- endif -%}
+
+    <div class="h-50"></div>
