@@ -2,51 +2,41 @@
 
  <!-- single work -->
 
-{%- if post.client != "Passion project"  -%}
+{%- if post.category != "fun"  -%}
       <div class=" col-md-4 col-sm-6 {{ post.categorie1 }}  {{ post.categorie2 }} {{ post.categorie3 }} {{ post.categorie4 }} {{ post.categorie5 }}">
         {%- if post.status == "empty" -%}
             <a class="portfolio_item" style="background: rgba(195, 75, 81, .07); pointer-events: none;
 ">
-
-       {%- else -%}
+        {%- else -%}
 
             <a href="{{ post.url | relative_url }}" class="portfolio_item" style="background: {{ post.cardcolor }};">
         {%- endif -%}
 
             <div class="imgwrap"><img src="{{ post.thumb }}" alt="image" class="img-responsive" style="transform: scale(.9);" /></div>
-               <div class="portfolio-border clearfix">
+            <div class="portfolio-border clearfix">
+            {%- assign date_format = site.minima.date_format | default: "%Y" -%}
+            <label>{{ post.client }} · {{ post.date | date: date_format }}</label>
+
+        {%- if post.status == "password" -%}
+            <h3 class="size-h3">{{ post.title | escape }}  <i class="ion-locked subtaltext" style="font-size: .75em;"></i></h3>
+        {%- elsif post.status == "empty" -%}
+           <h3 class="size-h3">{{ post.title | escape }}<span> (not avalible online)</span></h3>
+        {%- else -%}
+            <h3 class="size-h3">{{ post.title | escape }}</h3>
+        {%- endif -%}
+
 
 {%- else -%}
-      <div class="col-md-4 col-sm-6">
+      <div class="col-md-3 col-sm-4">
          <a href="{{ post.url | relative_url }}" class="portfolio_item passion"> 
             <img src="{{ post.thumb }}" alt="image" class="img-responsive"/>
-                           <div class="portfolio-border">
+                   <div class="portfolio-border">
+                        <h3 class="size-h4">{{ post.title | escape }}</h3>
+                         <p class="card-excerpt">{{ post.excerpt }}</p>
+
 
 {%- endif -%}
 
-                <!-- <div class="item_info"> -->
-
-                {%- if post.client != "Passion project"  -%}
-                    {%- assign date_format = site.minima.date_format | default: "%Y" -%}
-                    <label>{{ post.client }} · {{ post.date | date: date_format }}</label>
-                {%- endif -%}
-
-                {%- if post.status == "password" -%}
-                    <h3 class="size-h3">{{ post.title | escape }}  <i class="ion-locked subtaltext" style="font-size: .75em;"></i></h3>
-               {%- elsif post.status == "empty" -%}
-                   <h3 class="size-h3">{{ post.title | escape }}<span> (not avalible online)</span></h3>
-
-               {%- else -%}
-                    <h3 class="size-h3">{{ post.title | escape }}</h3>
-
-                {%- endif -%}
-
-                 {%- if post.client == "Passion project"  -%}
-                    <p class="card-excerpt">{{ post.excerpt }}</p>
-                {%- endif -%}
-
-                <!-- </div> -->
-                <!-- <h6>Read More <i class="ion-ios-arrow-right"></i></h6> -->
             </div>
     </a>
 </div>
