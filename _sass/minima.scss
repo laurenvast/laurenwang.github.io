@@ -668,13 +668,18 @@ display: inline-block;
 
     .singlereview {
         background: white;
-        padding: 1em 2em; 
+        padding: 2em 3em; 
         margin: 0 1em;
         display: inline-block;
         min-width: 56vw;
         scroll-snap-align: start;
         position: relative;
+        box-shadow: $main-bg-light 12px 12px 0 0;
+        /*border: solid $main-shadow 8px;*/
 
+    }
+    section:first-of-type {
+        margin-left: 8vw;
     }
 
     .name {
