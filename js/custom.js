@@ -213,7 +213,7 @@ $(document).ready(function () {
     //hover card
 
 
-    var wrap = $(".portfolio_container");
+    var wrap = $(".3dhover");
 
     wrap.on("mousemove", function (e) {
 
