@@ -1837,7 +1837,7 @@ transform-style: preserve-3d;
         /*transition: all 300ms ease-in-out;*/
     }
 
-    label, .card-excerpt {
+    p, label {
         transform: translateZ(70px);
 
     }
