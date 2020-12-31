@@ -1062,6 +1062,8 @@ i{
 
 
 
+
+
 .portfolio_item .portfolio_item_hover {
     position: absolute;
     top: 0px;
@@ -1835,7 +1837,7 @@ transform-style: preserve-3d;
         /*transition: all 300ms ease-in-out;*/
     }
 
-    label {
+    label, .card-excerpt {
         transform: translateZ(70px);
 
     }
@@ -1857,7 +1859,7 @@ transform-style: preserve-3d;
     .card-excerpt {
         font-style: normal;
         color: $text-color-light;
-        font-size: 16px;
+        font-size: 17px;
         font-weight: 500;
         letter-spacing: .02em;
         line-height: 23px;
